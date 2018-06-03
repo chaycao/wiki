@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>环境 · wiki</title>
+        <title>语法 · wiki</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,8 +69,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="语法/foreach.html" />
     
-    <link rel="prev" href="../JavaSE/JNI.html" />
+    
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -106,8 +108,6 @@
 
     
         
-        <li class="header">JavaSE</li>
-        
         
     
         <li class="chapter " data-level="1.1" data-path="../">
@@ -125,12 +125,19 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../JavaSE/语法.html">
+
+    
+        
+        <li class="header">JavaSE</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="./">
             
-                <a href="../JavaSE/语法.html">
+                <a href="./">
             
                     
-                        <b>1.2.</b>
+                        <b>2.1.</b>
                     
                     语法
             
@@ -138,16 +145,17 @@
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter " data-level="1.3" data-path="../JavaSE/并发.html">
+        <li class="chapter " data-level="2.1.1" data-path="语法/foreach.html">
             
-                <a href="../JavaSE/并发.html">
+                <a href="语法/foreach.html">
             
                     
-                        <b>1.3.</b>
+                        <b>2.1.1.</b>
                     
-                    并发
+                    foreach
             
                 </a>
             
@@ -155,12 +163,98 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../JavaSE/JNI.html">
+        <li class="chapter " data-level="2.1.2" data-path="语法/反射.html">
             
-                <a href="../JavaSE/JNI.html">
+                <a href="语法/反射.html">
             
                     
-                        <b>1.4.</b>
+                        <b>2.1.2.</b>
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="语法/多态.html">
+            
+                <a href="语法/多态.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../并发/">
+            
+                <a href="../并发/">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    并发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="并发/ThreadLocal.html">
+            
+                <a href="并发/ThreadLocal.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    ThreadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="并发/BlockingQueue.html">
+            
+                <a href="并发/BlockingQueue.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../JNI/JNI.html">
+            
+                <a href="../JNI/JNI.html">
+            
+                    
+                        <b>2.3.</b>
                     
                     JNI
             
@@ -177,18 +271,39 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="环境.html">
+        <li class="chapter " data-level="3.1" data-path="../Python/环境/">
             
-                <a href="环境.html">
+                <a href="../Python/环境/">
             
                     
-                        <b>2.1.</b>
+                        <b>3.1.</b>
                     
                     环境
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../Python/环境/包导出.html">
+            
+                <a href="../Python/环境/包导出.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    包导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -222,7 +337,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >环境</a>
+        <a href=".." >语法</a>
     </h1>
 </div>
 
@@ -237,13 +352,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x73AF;&#x5883;">&#x73AF;&#x5883;</h1>
-<h2 id="&#x5305;&#x5BFC;&#x51FA;">&#x5305;&#x5BFC;&#x51FA;</h2>
-<p>pip&#x5BFC;&#x51FA;</p>
-<pre><code class="lang-bash">pip freeze &gt; requirements.txt
-pip wheel -r requirements.txt
-pip install --use-wheel --no-index --find-links=wheelhouse -r requirements.txt
-</code></pre>
+                                <p>JavaSE</p>
 
                                 
                                 </section>
@@ -271,10 +380,14 @@ pip install --use-wheel --no-index --find-links=wheelhouse -r requirements.txt
 
             
                 
-                <a href="../JavaSE/JNI.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: JNI">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="语法/foreach.html" class="navigation navigation-next " aria-label="Next page: foreach">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -283,7 +396,7 @@ pip install --use-wheel --no-index --find-links=wheelhouse -r requirements.txt
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"环境","level":"2.1","depth":1,"previous":{"title":"JNI","level":"1.4","depth":1,"path":"JavaSE/JNI.md","ref":"JavaSE/JNI.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"Python/环境.md","mtime":"2018-06-03T15:51:43.610Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-03T16:49:32.456Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"语法","level":"2.1","depth":1,"next":{"title":"foreach","level":"2.1.1","depth":2,"path":"JavaSE/语法/foreach.md","ref":"JavaSE/语法/foreach.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"JavaSE/README.md","mtime":"2018-06-03T15:02:43.721Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-03T17:13:35.063Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

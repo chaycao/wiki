@@ -1,0 +1,464 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ThreadLocal · wiki</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="chaycao">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="BlockingQueue.html" />
+    
+    
+    <link rel="prev" href="../../并发/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/chaycao" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaSE</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../语法/foreach.html">
+            
+                <a href="../语法/foreach.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    foreach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../语法/反射.html">
+            
+                <a href="../语法/反射.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../语法/多态.html">
+            
+                <a href="../语法/多态.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../并发/">
+            
+                <a href="../../并发/">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    并发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.2.1" data-path="ThreadLocal.html">
+            
+                <a href="ThreadLocal.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    ThreadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="BlockingQueue.html">
+            
+                <a href="BlockingQueue.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../JNI/JNI.html">
+            
+                <a href="../../JNI/JNI.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    JNI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../Python/环境/">
+            
+                <a href="../../Python/环境/">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../Python/环境/包导出.html">
+            
+                <a href="../../Python/环境/包导出.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    包导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >ThreadLocal</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="threadlocal">ThreadLocal</h1>
+<h2 id="&#x4F5C;&#x7528;">&#x4F5C;&#x7528;</h2>
+<p>&#x63D0;&#x4F9B;&#x7EBF;&#x7A0B;&#x5185;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x51CF;&#x5C11;&#x540C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5185;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x6216;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x4E00;&#x4E9B;&#x516C;&#x5171;&#x53D8;&#x91CF;&#x7684;&#x4F20;&#x9012;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
+<h2 id="&#x5B9E;&#x73B0;&#x539F;&#x7406;">&#x5B9E;&#x73B0;&#x539F;&#x7406;</h2>
+<p>&#x6BCF;&#x4E2A; Thread &#x7EF4;&#x62A4;&#x4E00;&#x4E2A; ThreadLocalMap &#x6620;&#x5C04;&#x8868;&#xFF0C;&#x8BE5;&#x8868;&#x7684; key &#x4E3A; ThreadLocal &#x5B9E;&#x4F8B;&#xFF0C;value &#x4E3A;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7684; Object&#x3002;</p>
+<p>&#x5373;&#xFF0C;ThreadLocal&#x672C;&#x8EAB;&#x4E0D;&#x5B58;&#x50A8;&#x503C;&#xFF0C;&#x53EA;&#x4F5C;&#x4E3A; key &#x8BA9;&#x7EBF;&#x7A0B;&#x4ECE; ThreadLocalMap &#x83B7;&#x53D6;value&#x3002;</p>
+<p>&#x56FE;&#x4E2D;&#x7684;&#x865A;&#x7EBF;&#x8868;&#x793A; ThreadLocalMap &#x4F7F;&#x7528; ThreadLocal &#x7684;&#x5F31;&#x5F15;&#x7528;&#x4F5C;&#x4E3A; key&#xFF08;ThreadLocal &#x82E5;&#x65E0;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x4F1A;&#x5728;GC&#x65F6;&#x88AB;&#x56DE;&#x6536;&#xFF09;&#x3002;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x4F7F;&#x7528;&#x5F3A;&#x5F15;&#x7528;</p>
+<p>&#x5F53; ThreadLocal Ref &#x7684;&#x5BF9;&#x8C61;&#x88AB;&#x56DE;&#x6536;&#x65F6;&#xFF0C;ThreadLocalMap &#x4ECD;&#x6301;&#x6709; ThreadLocal &#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x82E5;&#x6CA1;&#x6709;&#x624B;&#x52A8;&#x5220;&#x9664;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4; Entry &#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x3002;</p>
+<h2 id="&#x9690;&#x60A3;&#x2014;&#x2014;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;">&#x9690;&#x60A3;&#x2014;&#x2014;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;</h2>
+<p>&#x5F53; ThreadLocal &#x65E0;&#x5F3A;&#x5F15;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x5728;GC&#x65F6;&#x88AB;&#x56DE;&#x6536;&#x3002;&#x5219; ThreadLocalMap &#x4E2D;&#x4F1A;&#x51FA;&#x73B0; key &#x4E3A; null &#x7684; Entry&#xFF0C;&#x5219;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x8BE5; Entry &#x7684; value&#x3002;&#x82E5;&#x7EBF;&#x7A0B;&#x4E0D;&#x7ED3;&#x675F;&#xFF0C;&#x5219; value &#x5B58;&#x5728;&#x4E00;&#x6761;&#x5F3A;&#x5F15;&#x7528;&#x94FE;&#xFF1A;Thread Ref -&gt; Thread -&gt; ThreadLocalMap -&gt; Entry -&gt; value&#xFF0C;&#x5C06;&#x65E0;&#x6CD5;&#x56DE;&#x6536;&#xFF0C;&#x9020;&#x6210;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x3002;</p>
+<p>ThreadLocal &#x9488;&#x5BF9;&#x4E0A;&#x9762;&#x60C5;&#x51B5;&#xFF0C;&#x5DF2;&#x6709;&#x9632;&#x62A4;&#x63AA;&#x65BD;&#xFF1A;&#x5728; ThreadLocal &#x7684; get()&#x3001;set()&#x3001;remove()&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6E05;&#x9664;&#x7EBF;&#x7A0B; ThreadLocalMap &#x91CC;&#x6240;&#x6709; key &#x4E3A; null &#x7684; value&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF01;&#x4ECD;&#x7136;&#x53EF;&#x80FD;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#xFF1A;</p>
+<p>&#x4F7F;&#x7528; static &#x7684; ThreadLocal&#xFF0C;&#x5EF6;&#x957F;&#x4E86; ThreadLocal &#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;</p>
+<p>&#x5206;&#x914D;&#x4E86; ThreadLocal&#xFF0C;&#x4F46;&#x4E0D;&#x8C03;&#x7528;get()&#x3001;set()&#x3001;remove&#x3002;</p>
+<p>&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x7684;&#x6839;&#x672C;&#x539F;&#x56E0;&#xFF1A;ThreadLcoalMap &#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E0E; Thread &#x4E00;&#x6837;&#x957F;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x5EFA;&#x8BAE;">&#x4F7F;&#x7528;&#x5EFA;&#x8BAE;</h2>
+<p>&#x6BCF;&#x6B21;&#x4F7F;&#x7528;&#x5B8C; ThreadLocal&#xFF0C;&#x8C03;&#x7528;remove()&#x65B9;&#x6CD5;&#xFF0C;&#x6E05;&#x9664;&#x6570;&#x636E;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../并发/" class="navigation navigation-prev " aria-label="Previous page: 并发">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="BlockingQueue.html" class="navigation navigation-next " aria-label="Next page: BlockingQueue">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ThreadLocal","level":"2.2.1","depth":2,"next":{"title":"BlockingQueue","level":"2.2.2","depth":2,"path":"JavaSE/并发/BlockingQueue.md","ref":"JavaSE/并发/BlockingQueue.md","articles":[]},"previous":{"title":"并发","level":"2.2","depth":1,"path":"并发/README.md","ref":"并发/README.md","articles":[{"title":"ThreadLocal","level":"2.2.1","depth":2,"path":"JavaSE/并发/ThreadLocal.md","ref":"JavaSE/并发/ThreadLocal.md","articles":[]},{"title":"BlockingQueue","level":"2.2.2","depth":2,"path":"JavaSE/并发/BlockingQueue.md","ref":"JavaSE/并发/BlockingQueue.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"JavaSE/并发/ThreadLocal.md","mtime":"2018-06-03T17:01:11.359Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-03T17:13:35.063Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
