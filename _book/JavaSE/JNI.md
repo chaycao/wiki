@@ -24,7 +24,7 @@ JNI 提供了 Java 程序与操作系统相关功能函数交互的接口
 
 调用过程示例图
 
-![JNI原理](/images/JNI原理.png)
+![JNI原理](images/JNI原理.png)
 
 ## 使用步骤
 

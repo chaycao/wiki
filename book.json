@@ -1,0 +1,9 @@
+{
+	"title":"wiki",
+	"author":"chaycao",
+	"theme-default": {
+            "showLevel": true
+        },
+	"plugins": ["expandable-chapters-small"]
+
+}
