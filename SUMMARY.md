@@ -1,8 +1,7 @@
 # Summary
 
-* [Introduction](README.md)
-
 ## JavaSE
+* [Introduction](README.md)
 * [语法](JavaSE/语法.md)
 * [并发](JavaSE/并发.md)
 * [JNI](JavaSE/JNI.md)

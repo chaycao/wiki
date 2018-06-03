@@ -1,9 +1,95 @@
 {
-	"title":"wiki",
-	"author":"chaycao",
-	"theme-default": {
+    "title": "wiki",
+    "author": "chaycao",
+    "links":
+    {
+        "sidebar":
+        {
+            "GitHub": "https://github.com/chaycao"
+        }
+    },
+
+    "plugins": [
+        "-sharing",
+        "sharing-plus",
+        "localized-footer",
+        "include-codeblock",
+        "ace",
+        "quiz",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "collapsible-menu",
+        "-livereload",
+		"expandable-chapters-small"
+    ],
+
+    "pluginsConfig":
+    {
+        "theme-default":
+        {
             "showLevel": true
         },
-	"plugins": ["expandable-chapters-small"]
+        "sharing":
+        {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "qq", "linkedin",
+                "qzone", "douban"
+            ]
+        },
 
+        "localized-footer":
+        {
+            "hline": true,
+            "filename": "./FOOTER.md"
+        },
+
+        "include-codeblock":
+        {
+            "template": "ace",
+            "unindent": true,
+            "edit": false
+        },
+
+        "quiz":
+        {
+            "labels":
+            {
+                "check": "提交答案",
+                "showExplanation": "显示解释",
+                "showCorrect": "显示正确答案",
+                "explanationHeader": "释义"
+            },
+            "text":
+            {
+                "noChosen": "Choose at least one answer",
+                "incomplete": "Some correct answers are missing"
+            },
+            "buttons":
+            {
+                "showCorrect": true,
+                "showExplanation": true
+            }
+        },
+		
+		"expandable-chapters-small":{}
+    }
 }
