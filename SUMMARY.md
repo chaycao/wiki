@@ -8,8 +8,8 @@
     * [反射](1.JavaSE/1.语法/2.反射.md)
     * [多态](1.JavaSE/1.语法/3.多态.md)
 * [并发](1.JavaSE/2.并发/README.md)
-    * [ThreadLocal](JavaSE/2.并发/1.ThreadLocal.md)
-    * [BlockingQueue](JavaSE/2.并发/2.BlockingQueue.md)
+    * [ThreadLocal](1.JavaSE/2.并发/1.ThreadLocal.md)
+    * [BlockingQueue](1.JavaSE/2.并发/2.BlockingQueue.md)
 * [JNI](1.JavaSE/3.JNI/JNI.md)
 
 ## Python
