@@ -1,0 +1,838 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JVM · wiki</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="chaycao">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="SpringMVC.html" />
+    
+    
+    <link rel="prev" href="Java.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/chaycao" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaSE</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../JavaSE/">
+            
+                <a href="../JavaSE/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../JavaSE/语法/foreach.html">
+            
+                <a href="../JavaSE/语法/foreach.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    foreach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../JavaSE/语法/反射.html">
+            
+                <a href="../JavaSE/语法/反射.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../JavaSE/语法/多态.html">
+            
+                <a href="../JavaSE/语法/多态.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../JavaSE/并发/">
+            
+                <a href="../JavaSE/并发/">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    并发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../JavaSE/并发/ThreadLocal.html">
+            
+                <a href="../JavaSE/并发/ThreadLocal.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    ThreadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../JavaSE/并发/BlockingQueue.html">
+            
+                <a href="../JavaSE/并发/BlockingQueue.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../JavaSE/JNI/JNI.html">
+            
+                <a href="../JavaSE/JNI/JNI.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    JNI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JVM</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../JVM/运行时数据区域/运行时数据区域.html">
+            
+                <a href="../JVM/运行时数据区域/运行时数据区域.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    运行时数据区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../JVM/垃圾回收/垃圾回收.html">
+            
+                <a href="../JVM/垃圾回收/垃圾回收.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试真题</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="Java.html">
+            
+                <a href="Java.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="JVM.html">
+            
+                <a href="JVM.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="SpringMVC.html">
+            
+                <a href="SpringMVC.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    SpringMVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="数据库.html">
+            
+                <a href="数据库.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="计算机网络.html">
+            
+                <a href="计算机网络.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="算法.html">
+            
+                <a href="算法.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="大数据.html">
+            
+                <a href="大数据.html">
+            
+                    
+                        <b>4.7.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../Python/环境/">
+            
+                <a href="../Python/环境/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../Python/环境/包导出.html">
+            
+                <a href="../Python/环境/包导出.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    包导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Web/XML.html">
+            
+                <a href="../Web/XML.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Linux/常用命令.html">
+            
+                <a href="../Linux/常用命令.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../Linux/常用命令/文件及目录管理.html">
+            
+                <a href="../Linux/常用命令/文件及目录管理.html">
+            
+                    
+                        <b>7.1.1.</b>
+                    
+                    文件及目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../Linux/常用命令/磁盘管理.html">
+            
+                <a href="../Linux/常用命令/磁盘管理.html">
+            
+                    
+                        <b>7.1.2.</b>
+                    
+                    磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../Linux/常用命令/进程管理.html">
+            
+                <a href="../Linux/常用命令/进程管理.html">
+            
+                    
+                        <b>7.1.3.</b>
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../Linux/常用命令/性能管理.html">
+            
+                <a href="../Linux/常用命令/性能管理.html">
+            
+                    
+                        <b>7.1.4.</b>
+                    
+                    性能管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../Linux/">
+            
+                <a href="../Linux/">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    命令详解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../Linux/命令详解/top.html">
+            
+                <a href="../Linux/命令详解/top.html">
+            
+                    
+                        <b>7.2.1.</b>
+                    
+                    top
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../Linux/命令详解/free.html">
+            
+                <a href="../Linux/命令详解/free.html">
+            
+                    
+                        <b>7.2.2.</b>
+                    
+                    free
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../Linux/命令详解/vmstat.html">
+            
+                <a href="../Linux/命令详解/vmstat.html">
+            
+                    
+                        <b>7.2.3.</b>
+                    
+                    vmstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">MySQL</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../MySQL/">
+            
+                <a href="../MySQL/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    锁
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../MySQL/锁/悲观锁与乐观锁.html">
+            
+                <a href="../MySQL/锁/悲观锁与乐观锁.html">
+            
+                    
+                        <b>8.1.1.</b>
+                    
+                    悲观锁与乐观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JVM</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="1-java&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F1A;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x9732;">1. Java&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F1A;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x9732;</h2>
+<p>&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x662F;&#x6307;&#x4E0D;&#x518D;&#x4F7F;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x88AB;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x6301;&#x6709;&#x8BE5;&#x5F15;&#x7528;&#x5BFC;&#x81F4;GC&#x4E0D;&#x80FD;&#x56DE;&#x6536;&#x3002;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ol>
+<li>&#x4F7F;&#x7528;&#x9759;&#x6001;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7684;&#x5BB9;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x6301;&#x6709;&#x8FC7;&#x591A;&#x6570;&#x636E;</li>
+<li>&#x8FDE;&#x63A5;&#x8D44;&#x6E90;&#x672A;&#x91CA;&#x653E;&#xFF0C;&#x5982;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x3001;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x3001;IO&#x8FDE;&#x63A5;&#x7B49;&#xFF0C;&#x5176;&#x539F;&#x56E0;&#x662F;&#x957F;&#x751F;&#x547D;&#x5468;&#x671F;&#x5BF9;&#x8C61;&#x62E5;&#x6709;&#x77ED;&#x751F;&#x547D;&#x5468;&#x671F;&#x5BF9;&#x8C61;&#x5F15;&#x7528;</li>
+</ol>
+<h2 id="2-gc&#x7B97;&#x6CD5;&#x548C;&#x673A;&#x5236;">2. GC&#x7B97;&#x6CD5;&#x548C;&#x673A;&#x5236;</h2>
+<p>&#x4ECE;&#x4E09;&#x4E2A;&#x65B9;&#x9762;&#x8BB2;&#x8FF0;</p>
+<p>&#xFF08;1&#xFF09;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x89E6;&#x53D1;GC</p>
+<p>&#x5F53;&#x65B0;&#x751F;&#x4EE3;&#x4E2D;&#x7684;eden&#x533A;&#x6EE1;&#x4E86;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;minor gc&#xFF1B;</p>
+<p>&#x5F53;&#x8981;&#x5347;&#x5230;&#x8001;&#x5E74;&#x4EE3;&#x7684;&#x5BF9;&#x8C61;&#x5927;&#x4E8E;&#x8001;&#x5E74;&#x4EE3;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x4F1A;&#x89E6;&#x53D1;full gc&#xFF0C;&#x6216;&#x8005;&#x5C0F;&#x4E8E;&#x65F6;&#x88AB;HandlePromotionFailure&#x53C2;&#x6570;&#x5F3A;&#x5236;full gc&#x3002;</p>
+<p>&#xFF08;2&#xFF09;&#x54EA;&#x4E9B;&#x5BF9;&#x8C61;&#x9700;&#x8981;&#x88AB;&#x56DE;&#x6536;</p>
+<p>&#x4ECE;GC Roots&#x641C;&#x7D22;&#x4E0D;&#x5230;&#xFF0C;&#x800C;&#x4E14;&#x7ECF;&#x8FC7;&#x7B2C;&#x4E00;&#x6B21;&#x6807;&#x8BB0;&#x3001;&#x6E05;&#x7406;&#x540E;&#xFF0C;&#x4ECD;&#x7136;&#x6CA1;&#x6709;&#x590D;&#x6D3B;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#xFF08;3&#xFF09;&#x5982;&#x4F55;&#x56DE;&#x6536;</p>
+<p>&#x5BF9;&#x4E8E;&#x65B0;&#x751F;&#x4EE3;&#x4F7F;&#x7528;&#x590D;&#x5236;&#x7B97;&#x6CD5;&#xFF0C;&#x5C06;Eden&#x548C;from surivor&#x4E2D;&#x8FD8;&#x6D3B;&#x7740;&#x7684;&#x5BF9;&#x8C61;&#x4E00;&#x6B21;&#x6027;&#x590D;&#x5236;&#x5230;to surivor&#x4E2D;&#xFF0C;&#x518D;&#x6E05;&#x7406;&#x6389;Eden&#x548C;From Survior&#x7A7A;&#x95F4;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x8001;&#x5E74;&#x4EE3;&#x4F7F;&#x7528;&#x6807;&#x8BB0;&#x6E05;&#x9664;&#x6216;&#x6807;&#x8BB0;&#x6574;&#x7406;&#x7B97;&#x6CD5;&#x3002;&#x6807;&#x8BB0;&#x6E05;&#x9664;&#x9996;&#x5148;&#x6807;&#x8BB0;&#x51FA;&#x6240;&#x6709;&#x9700;&#x8981;&#x56DE;&#x6536;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x6807;&#x8BB0;&#x5B8C;&#x6210;&#x540E;&#x7EDF;&#x4E00;&#x56DE;&#x6536;&#x6240;&#x6709;&#x6807;&#x8BB0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x4E0D;&#x8FDE;&#x7EED;&#x7684;&#x5185;&#x5B58;&#x788E;&#x7247;&#xFF1B;&#x6807;&#x8BB0;&#x6574;&#x7406;&#x7684;&#x6807;&#x8BB0;&#x4E0E;&#x6807;&#x8BB0;&#x6E05;&#x9664;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x56DE;&#x6536;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x6240;&#x6709;&#x5B58;&#x6D3B;&#x7684;&#x5BF9;&#x8C61;&#x5411;&#x4E00;&#x7AEF;&#x79FB;&#x52A8;&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5;&#x6E05;&#x7406;&#x6389;&#x8FB9;&#x754C;&#x4EE5;&#x5916;&#x7684;&#x5185;&#x5B58; &#x3002;</p>
+<h2 id="3-jvm&#x5185;&#x5B58;&#x6A21;&#x578B;">3. JVM&#x5185;&#x5B58;&#x6A21;&#x578B;</h2>
+<p>JVM&#x5185;&#x5B58;&#x6A21;&#x578B;&#x88AB;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x533A;&#x57DF;&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#xFF1A;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#x7684;&#x5730;&#x5740;</p>
+<p>&#xFF08;2&#xFF09;&#x865A;&#x62DF;&#x673A;&#x6808;&#xFF1A;&#x5F53;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6808;&#x5E27;&#xFF0C;&#x5B58;&#x653E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x8868;&#x3001;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x3001;&#x65B9;&#x6CD5;&#x51FA;&#x53E3;&#x7B49;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#xFF08;3&#xFF09;&#x672C;&#x5730;&#x65B9;&#x6CD5;&#x6808;&#xFF1A;Native&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x4E0E;&#x865A;&#x62DF;&#x673A;&#x6808;&#x7C7B;&#x4F3C;</p>
+<p>&#xFF08;4&#xFF09;&#x865A;&#x62DF;&#x673A;&#x5806;&#xFF1A;&#x6240;&#x6709;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x5728;&#x5806;&#x4E2D;&#x5206;&#x914D;&#x5185;&#x5B58;&#x5E76;&#x521D;&#x59CB;&#x5316;</p>
+<p>&#xFF08;5&#xFF09;&#x65B9;&#x6CD5;&#x533A;&#xFF1A;&#x5B58;&#x653E;&#x865A;&#x62DF;&#x673A;&#x52A0;&#x8F7D;&#x7684;&#x7C7B;&#x4FE1;&#x606F;&#x3001;&#x5E38;&#x91CF;&#x3001;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x3001;JIT&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x7B49;&#x4FE1;&#x606F;</p>
+<p>&#x5176;&#x4E2D;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#x3001;&#x865A;&#x62DF;&#x673A;&#x6808;&#x3001;&#x672C;&#x5730;&#x65B9;&#x6CD5;&#x6808;&#x4E3A;&#x7EBF;&#x7A0B;&#x79C1;&#x6709;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Java.html" class="navigation navigation-prev " aria-label="Previous page: Java">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="SpringMVC.html" class="navigation navigation-next " aria-label="Next page: SpringMVC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JVM","level":"4.2","depth":1,"next":{"title":"SpringMVC","level":"4.3","depth":1,"path":"src/面试真题/SpringMVC.md","ref":"src/面试真题/SpringMVC.md","articles":[]},"previous":{"title":"Java","level":"4.1","depth":1,"path":"src/面试真题/Java.md","ref":"src/面试真题/Java.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"src/面试真题/JVM.md","mtime":"2018-07-06T14:51:05.642Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-07T06:54:18.480Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

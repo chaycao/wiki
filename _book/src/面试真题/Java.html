@@ -1,0 +1,991 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java · wiki</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="chaycao">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="JVM.html" />
+    
+    
+    <link rel="prev" href="../JVM/垃圾回收/垃圾回收.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/chaycao" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaSE</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../JavaSE/">
+            
+                <a href="../JavaSE/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../JavaSE/语法/foreach.html">
+            
+                <a href="../JavaSE/语法/foreach.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    foreach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../JavaSE/语法/反射.html">
+            
+                <a href="../JavaSE/语法/反射.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../JavaSE/语法/多态.html">
+            
+                <a href="../JavaSE/语法/多态.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../JavaSE/并发/">
+            
+                <a href="../JavaSE/并发/">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    并发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../JavaSE/并发/ThreadLocal.html">
+            
+                <a href="../JavaSE/并发/ThreadLocal.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    ThreadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../JavaSE/并发/BlockingQueue.html">
+            
+                <a href="../JavaSE/并发/BlockingQueue.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../JavaSE/JNI/JNI.html">
+            
+                <a href="../JavaSE/JNI/JNI.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    JNI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JVM</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../JVM/运行时数据区域/运行时数据区域.html">
+            
+                <a href="../JVM/运行时数据区域/运行时数据区域.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    运行时数据区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../JVM/垃圾回收/垃圾回收.html">
+            
+                <a href="../JVM/垃圾回收/垃圾回收.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试真题</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="Java.html">
+            
+                <a href="Java.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="JVM.html">
+            
+                <a href="JVM.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="SpringMVC.html">
+            
+                <a href="SpringMVC.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    SpringMVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="数据库.html">
+            
+                <a href="数据库.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="计算机网络.html">
+            
+                <a href="计算机网络.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="算法.html">
+            
+                <a href="算法.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="大数据.html">
+            
+                <a href="大数据.html">
+            
+                    
+                        <b>4.7.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../Python/环境/">
+            
+                <a href="../Python/环境/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../Python/环境/包导出.html">
+            
+                <a href="../Python/环境/包导出.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    包导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Web/XML.html">
+            
+                <a href="../Web/XML.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Linux/常用命令.html">
+            
+                <a href="../Linux/常用命令.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../Linux/常用命令/文件及目录管理.html">
+            
+                <a href="../Linux/常用命令/文件及目录管理.html">
+            
+                    
+                        <b>7.1.1.</b>
+                    
+                    文件及目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../Linux/常用命令/磁盘管理.html">
+            
+                <a href="../Linux/常用命令/磁盘管理.html">
+            
+                    
+                        <b>7.1.2.</b>
+                    
+                    磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../Linux/常用命令/进程管理.html">
+            
+                <a href="../Linux/常用命令/进程管理.html">
+            
+                    
+                        <b>7.1.3.</b>
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../Linux/常用命令/性能管理.html">
+            
+                <a href="../Linux/常用命令/性能管理.html">
+            
+                    
+                        <b>7.1.4.</b>
+                    
+                    性能管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../Linux/">
+            
+                <a href="../Linux/">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    命令详解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../Linux/命令详解/top.html">
+            
+                <a href="../Linux/命令详解/top.html">
+            
+                    
+                        <b>7.2.1.</b>
+                    
+                    top
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../Linux/命令详解/free.html">
+            
+                <a href="../Linux/命令详解/free.html">
+            
+                    
+                        <b>7.2.2.</b>
+                    
+                    free
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../Linux/命令详解/vmstat.html">
+            
+                <a href="../Linux/命令详解/vmstat.html">
+            
+                    
+                        <b>7.2.3.</b>
+                    
+                    vmstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">MySQL</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../MySQL/">
+            
+                <a href="../MySQL/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    锁
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../MySQL/锁/悲观锁与乐观锁.html">
+            
+                <a href="../MySQL/锁/悲观锁与乐观锁.html">
+            
+                    
+                        <b>8.1.1.</b>
+                    
+                    悲观锁与乐观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Java</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="1-hashmap&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x53D1;&#x751F;&#x6B7B;&#x94FE;">1. HashMap&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x53D1;&#x751F;&#x6B7B;&#x94FE;</h2>
+<p>JDK1.8&#x4E4B;&#x524D;&#xFF0C;&#x5E76;&#x53D1;resize()&#x7684;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x6B7B;&#x94FE;&#x3002;</p>
+<p><a href="https://coolshell.cn/articles/9606.html" target="_blank">&#x53C2;&#x8003;</a></p>
+<h2 id="2-hashmap">2. HashMap</h2>
+<p><strong>HashMap&#x7684;&#x7279;&#x6027;&#xFF1F;</strong></p>
+<p>HashMap &#x5B58;&#x50A8;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5B9E;&#x73B0;&#x5FEB;&#x901F;&#x5B58;&#x53D6;&#x6570;&#x636E;&#xFF1B;&#x5141;&#x8BB8;null&#x952E;\&#x503C;&#xFF1B;&#x975E;&#x540C;&#x6B65;&#xFF1B;&#x4E0D;&#x4FDD;&#x8BC1;&#x6709;&#x5E8F;</p>
+<p><strong>HashMap&#x7684;&#x539F;&#x7406;&#xFF0C;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1F;</strong></p>
+<p>&#x57FA;&#x4E8E;hashing&#x7684;&#x539F;&#x7406;&#xFF0C;jdk1.8&#x4E4B;&#x524D;&#x5E95;&#x5C42;&#x4F7F;&#x7528;&#x54C8;&#x5E0C;&#x8868;&#xFF08;&#x6570;&#x7EC4;+&#x94FE;&#x8868;&#xFF09;&#x5B9E;&#x73B0;&#x3002;jdk1.8&#x4E4B;&#x540E;&#xFF0C;&#x5F53;&#x94FE;&#x8868;&#x957F;&#x5EA6;&#x5927;&#x4E8E;8&#x65F6;&#xFF0C;&#x5C06;&#x94FE;&#x8868;&#x8F6C;&#x6362;&#x6210;&#x7EA2;&#x9ED1;&#x6811;&#x3002;</p>
+<p>HashMap&#x4E2D;&#x7684;&#x6700;&#x91CD;&#x8981;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;put&#x3001;get</p>
+<p>put&#x65B9;&#x6CD5;&#x7684;&#x539F;&#x7406;&#xFF1A;&#x4F20;&#x5165;k&#xFF0C;v&#xFF0C;&#x901A;&#x8FC7;&#x53D6;hashcode&#xFF0C;&#x9AD8;&#x4F4D;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x3001;&#x53D6;&#x6A21;&#x8FD0;&#x7B97;&#x4E09;&#x6B65;&#xFF0C;&#x83B7;&#x5F97;bucket&#x4F4D;&#x7F6E;&#xFF0C;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x78B0;&#x649E;&#x76F4;&#x63A5;&#x653E;bucket&#x91CC;&#xFF0C;&#x5982;&#x679C;&#x78B0;&#x649E;&#xFF0C;&#x4EE5;&#x94FE;&#x8868;&#x5F62;&#x5F0F;&#x5B58;&#x5728;buctets&#x540E;&#xFF0C;&#x5982;&#x679C;&#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5C31;&#x66FF;&#x6362;oldvalue&#x3002;&#x5F53;hashmap&#x7684;bucket&#x5360;&#x7528;&#x60C5;&#x51B5;&#x8D85;&#x8FC7;capacity*load_factor&#x5219;&#xFF0C;&#x901A;&#x8FC7;resize&#x65B9;&#x6CD5;&#x6269;&#x5BB9;&#x4E3A;2&#x500D;&#x3002;</p>
+<p>get&#x65B9;&#x6CD5;&#x7684;&#x539F;&#x7406;&#xFF1A;&#x4F20;&#x5165;k&#xFF0C;&#x901A;&#x8FC7;&#x53D6;hashcode&#xFF0C;&#x9AD8;&#x4F4D;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x3001;&#x53D6;&#x6A21;&#x8FD0;&#x7B97;&#x4E09;&#x6B65;&#xFF0C;&#x83B7;&#x5F97;bucket&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x8FDB;&#x4E00;&#x6B65;&#x8C03;&#x7528;equals&#x65B9;&#x6CD5;&#x786E;&#x5B9A;&#x952E;&#x503C;&#x5BF9;&#x3002;</p>
+<p><strong>&#x5F53;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;hashcode&#x76F8;&#x540C;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;</strong></p>
+<p>&#x82E5;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;hashcode&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x4ED6;&#x4EEC;&#x7684;bucket&#x4F4D;&#x7F6E;&#x76F8;&#x540C;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x78B0;&#x649E;&#x3002;</p>
+<p><strong>&#x6709;&#x54EA;&#x4E9B;hash&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF1F;</strong></p>
+<ul>
+<li>&#x76F4;&#x63A5;&#x5B9A;&#x5740;&#x6CD5;&#xFF1A;&#x53D6;k&#x7684;&#x67D0;&#x4E2A;&#x7EBF;&#x6027;&#x51FD;&#x6570;&#x503C;&#x4E3A;&#x6563;&#x5217;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x6570;&#x5B57;&#x5206;&#x6790;&#x6CD5;&#xFF1A;&#x63D0;&#x53D6;&#x5173;&#x952E;&#x5B57;k&#x4E2D;&#x53D6;&#x503C;&#x6BD4;&#x8F83;&#x5747;&#x5300;&#x7684;&#x6570;&#x5B57;&#x4F5C;&#x4E3A;&#x54C8;&#x5E0C;&#x5730;&#x5740;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x751F;&#x65E5;&#x4F7F;&#x7528;&#x6708;&#x4EFD;&#x548C;&#x65E5;&#x671F;&#x6784;&#x6210;&#x6563;&#x5217;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x9664;&#x7559;&#x4F59;&#x6570;&#x6CD5;&#xFF1A;&#x7528;&#x5173;&#x952E;&#x5B57;k&#x9664;&#x4EE5;&#x67D0;&#x4E2A;&#x4E0D;&#x5927;&#x4E8E;&#x54C8;&#x5E0C;&#x8868;&#x957F;&#x5EA6;m&#x7684;&#x6570;p&#xFF0C;&#x5C06;&#x6240;&#x5F97;&#x4F59;&#x6570;&#x4F5C;&#x4E3A;&#x54C8;&#x5E0C;&#x8868;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x5206;&#x6BB5;&#x53E0;&#x52A0;&#x6CD5;&#xFF1A;&#x6309;&#x7167;&#x54C8;&#x5E0C;&#x8868;&#x5730;&#x5740;&#x4F4D;&#x6570;&#x5C06;&#x5173;&#x952E;&#x5B57;&#x5206;&#x6210;&#x4F4D;&#x6570;&#x76F8;&#x7B49;&#x7684;&#x51E0;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x6BD4;&#x8F83;&#x77ED;&#x3002;&#x7136;&#x540E;&#x5C06;&#x8FD9;&#x51E0;&#x90E8;&#x5206;&#x76F8;&#x52A0;&#xFF0C;&#x820D;&#x5F03;&#x6700;&#x9AD8;&#x8FDB;&#x4F4D;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x8BE5;&#x5173;&#x952E;&#x5B57;&#x7684;&#x54C8;&#x5E0C;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x5E73;&#x65B9;&#x53D6;&#x4E2D;&#x6CD5;&#xFF1A;&#x5982;&#x679C;&#x5173;&#x952E;&#x5B57;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#x5206;&#x5E03;&#x90FD;&#x4E0D;&#x5747;&#x5300;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x6C42;&#x51FA;&#x5B83;&#x7684;&#x5E73;&#x65B9;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x6309;&#x7167;&#x9700;&#x6C42;&#x53D6;&#x4E2D;&#x95F4;&#x7684;&#x51E0;&#x4F4D;&#x4F5C;&#x4E3A;&#x54C8;&#x5E0C;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x4F2A;&#x968F;&#x673A;&#x6570;&#x6CD5;&#xFF1A;&#x91C7;&#x7528;&#x4E00;&#x4E2A;&#x4F2A;&#x968F;&#x673A;&#x6570;&#x5F53;&#x4F5C;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x3002;</li>
+</ul>
+<p><strong>&#x6709;&#x54EA;&#x4E9B;hash&#x51B2;&#x7A81;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1F;</strong></p>
+<ul>
+<li>&#x5F00;&#x653E;&#x5730;&#x5740;&#x6CD5;&#xFF1A;&#x4E00;&#x65E6;&#x53D1;&#x751F;&#x4E86;&#x51B2;&#x7A81;&#xFF0C;&#x5C31;&#x53BB;&#x5BFB;&#x627E;&#x4E0B;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x6563;&#x5217;&#x5730;&#x5740;&#xFF0C;&#x53EA;&#x8981;&#x6563;&#x5217;&#x8868;&#x8DB3;&#x591F;&#x5927;&#xFF0C;&#x7A7A;&#x7684;&#x6563;&#x5217;&#x5730;&#x5740;&#x603B;&#x80FD;&#x627E;&#x5230;&#xFF0C;&#x5E76;&#x5C06;&#x8BB0;&#x5F55;&#x5B58;&#x5165;&#x3002;</li>
+<li>&#x94FE;&#x5730;&#x5740;&#x6CD5;&#xFF1A;&#x5C06;&#x54C8;&#x5E0C;&#x8868;&#x7684;&#x6BCF;&#x4E2A;&#x5355;&#x5143;&#x4F5C;&#x4E3A;&#x94FE;&#x8868;&#x7684;&#x5934;&#x7ED3;&#x70B9;&#xFF0C;&#x6240;&#x6709;&#x54C8;&#x5E0C;&#x5730;&#x5740;&#x4E3A;i&#x7684;&#x5143;&#x7D20;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x3002;&#x5373;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#x65F6;&#x5C31;&#x628A;&#x8BE5;&#x5173;&#x952E;&#x5B57;&#x94FE;&#x5728;&#x4EE5;&#x8BE5;&#x5355;&#x5143;&#x4E3A;&#x5934;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x8868;&#x7684;&#x5C3E;&#x90E8;&#x3002;</li>
+<li>&#x518D;&#x54C8;&#x5E0C;&#x6CD5;&#xFF1A;&#x5F53;&#x54C8;&#x5E0C;&#x5730;&#x5740;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#x7528;&#x5176;&#x4ED6;&#x7684;&#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x53E6;&#x4E00;&#x4E2A;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5730;&#x5740;&#xFF0C;&#x76F4;&#x5230;&#x51B2;&#x7A81;&#x4E0D;&#x518D;&#x4EA7;&#x751F;&#x4E3A;&#x6B62;&#x3002;</li>
+<li>&#x5EFA;&#x7ACB;&#x516C;&#x5171;&#x6EA2;&#x51FA;&#x8868;&#xFF1A;&#x5C06;&#x54C8;&#x5E0C;&#x8868;&#x5206;&#x4E3A;&#x57FA;&#x672C;&#x8868;&#x548C;&#x6EA2;&#x51FA;&#x8868;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x653E;&#x5165;&#x6EA2;&#x51FA;&#x8868;&#x4E2D;&#x3002;</li>
+</ul>
+<p><strong>&#x4E3A;&#x4EC0;&#x4E48;String&#x3001;Integer&#x9002;&#x5408;&#x4F5C;&#x4E3A;&#x952E;&#xFF1F;</strong></p>
+<ul>
+<li>&#x5DF2;&#x91CD;&#x5199;&#x4E86;equals()&#x548C;hashCode()&#x3002;&#xFF08;&#x8BA9;&#x4E0D;&#x76F8;&#x7B49;&#x7684;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x4E0D;&#x540C;&#x7684;hashcode&#x503C;&#xFF09;</li>
+<li>&#x5177;&#x6709;&#x4E0D;&#x53EF;&#x53D8;&#x6027;&#xFF0C;&#x53EF;&#x9632;&#x6B62;&#x952E;&#x503C;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x7EBF;&#x7A0B;&#x5B89;&#x5168; </li>
+</ul>
+<p><strong>HashMap&#x4E0E;HashTable&#x533A;&#x522B;&#xFF1F;</strong></p>
+<ol>
+<li>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#x3002;HashTable&#x4E2D;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x51FD;&#x6570;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;HashMap&#x662F;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x3002;</li>
+<li>NULL&#x503C;&#x3002;HashMap&#x7684;key&#x3001;value&#x90FD;&#x53EF;&#x4E3A;null&#xFF0C;Hashtable&#x90FD;&#x4E0D;&#x53EF;&#x4E3A;null</li>
+<li>&#x5BB9;&#x5668;&#x7684;&#x521D;&#x59CB;&#x503C;&#x548C;&#x6269;&#x5BB9;&#x65B9;&#x5F0F;&#x3002;HashMap&#x9ED8;&#x8BA4;16&#xFF0C;&#x6269;&#x5BB9; &#xFF08;&#x539F;&#x59CB;&#x5BB9;&#x91CF;<em>2&#xFF09;,&#xFF1B;HashTable&#x9ED8;&#x8BA4;11&#xFF0C;&#x6269;&#x5BB9; &#xFF08;&#x539F;&#x59CB;&#x5BB9;&#x91CF; </em> 2+1&#xFF09;</li>
+<li>HashMap&#x7EE7;&#x627F;&#x4E8E;AbstractMap&#xFF0C;HashTable&#x7EE7;&#x627F;&#x4E8E;Dictionary</li>
+<li>hash&#x7B97;&#x6CD5;&#x3002;HashMap&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x54C8;&#x5E0C;&#x7B97;&#x6CD5;&#xFF1B;HashTable&#x76F4;&#x63A5;&#x91C7;&#x7528;key&#x7684;hashCode()&#xFF1B;</li>
+<li>&#x901F;&#x5EA6;&#x3002;&#x5355;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E0B;HashMap&#x66F4;&#x5FEB;</li>
+</ol>
+<p><strong>&#x8BA9;HashMap&#x540C;&#x6B65;</strong></p>
+<p>Collections.synchronizeMap()</p>
+<h2 id="3-&#x591A;&#x7EBF;&#x7A0B;&#x987A;&#x5E8F;&#x6267;&#x884C;">3. &#x591A;&#x7EBF;&#x7A0B;&#x987A;&#x5E8F;&#x6267;&#x884C;</h2>
+<p>&#xFF08;1&#xFF09; &#x6709;A&#x3001;B&#x3001;C&#x3001;D&#x56DB;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;A&#x7EBF;&#x7A0B;&#x8F93;&#x51FA;A, B&#x7EBF;&#x7A0B;&#x8F93;&#x51FA;B, C&#x7EBF;&#x7A0B;&#x8F93;&#x51FA;C&#xFF0C;D&#x7EBF;&#x7A0B;&#x8F93;&#x51FA;D&#xFF0C;&#x8981;&#x6C42;, &#x540C;&#x65F6;&#x542F;&#x52A8;&#x56DB;&#x4E2A;&#x7EBF;&#x7A0B;, &#x6309;&#x987A;&#x5E8F;&#x8F93;&#x51FA;ABCD </p>
+<p>&#x7B54;&#xFF1A;&#x901A;&#x8FC7;Thread.join()&#x65B9;&#x6CD5;&#xFF0C;B&#x3001;C&#x3001;D&#x5206;&#x522B;&#x6301;&#x6709;A&#x3001;B&#x3001;C&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x8F93;&#x51FA;&#x524D;&#x8C03;&#x7528;&#x6301;&#x6709;&#x7EBF;&#x7A0B;&#x7684;join&#x65B9;&#x6CD5;&#xFF0C;&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF0C;&#x518D;&#x8F93;&#x51FA;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> thread;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestThread1</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        <span class="hljs-comment">// &#x7EBF;&#x7A0B;A</span>
+        <span class="hljs-keyword">final</span> Thread a = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;A&quot;</span>);
+            }
+        });
+
+        <span class="hljs-comment">// &#x7EBF;&#x7A0B;B</span>
+        <span class="hljs-keyword">final</span> Thread b = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">try</span> {
+                    <span class="hljs-comment">// &#x6267;&#x884C;b&#x7EBF;&#x7A0B;&#x4E4B;&#x524D;&#xFF0C;&#x52A0;&#x5165;a&#x7EBF;&#x7A0B;,&#x8BA9;a&#x7EBF;&#x7A0B;&#x6267;&#x884C;</span>
+                    a.join();
+                } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(<span class="hljs-string">&quot;B&quot;</span>);
+            }
+        });
+
+        <span class="hljs-comment">// &#x7EBF;&#x7A0B;C</span>
+        <span class="hljs-keyword">final</span> Thread c = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">try</span> {
+                    <span class="hljs-comment">// &#x6267;&#x884C;c&#x7EBF;&#x7A0B;&#x4E4B;&#x524D;&#xFF0C;&#x52A0;&#x5165;b&#x7EBF;&#x7A0B;,&#x8BA9;b&#x7EBF;&#x7A0B;&#x6267;&#x884C;</span>
+                    b.join();
+                } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(<span class="hljs-string">&quot;C&quot;</span>);
+            }
+        });
+
+        <span class="hljs-comment">// &#x7EBF;&#x7A0B;D</span>
+        Thread d = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">try</span> {
+                    <span class="hljs-comment">// &#x6267;&#x884C;d&#x7EBF;&#x7A0B;&#x4E4B;&#x524D;&#xFF0C;&#x52A0;&#x5165;c&#x7EBF;&#x7A0B;,&#x8BA9;c&#x7EBF;&#x7A0B;&#x6267;&#x884C;</span>
+                    c.join();
+                } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(<span class="hljs-string">&quot;D&quot;</span>);
+            }
+        });
+
+        <span class="hljs-comment">// &#x542F;&#x52A8;&#x56DB;&#x4E2A;&#x7EBF;&#x7A0B;</span>
+        a.start();
+        b.start();
+        c.start();
+        d.start();
+
+    }
+
+}
+</code></pre>
+<p>&#xFF08;2&#xFF09; &#x6709;A,B,C&#x4E09;&#x4E2A;&#x7EBF;&#x7A0B;, A&#x7EBF;&#x7A0B;&#x8F93;&#x51FA;A, B&#x7EBF;&#x7A0B;&#x8F93;&#x51FA;B, C&#x7EBF;&#x7A0B;&#x8F93;&#x51FA;C&#x3002;&#x8981;&#x6C42;, &#x540C;&#x65F6;&#x542F;&#x52A8;&#x4E09;&#x4E2A;&#x7EBF;&#x7A0B;, &#x6309;&#x987A;&#x5E8F;&#x8F93;&#x51FA;ABC, &#x5FAA;&#x73AF;10&#x6B21; </p>
+<p>&#x4F7F;&#x7528;ReentrantLock&#x63A7;&#x5236;&#x5E76;&#x53D1;,&#x5E76;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;state&#x6574;&#x6570;&#x6765;&#x5224;&#x65AD;&#x5E94;&#x54EA;&#x4E2A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x3002; </p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> state = <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> class A extend <span class="hljs-title">Thread</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+            lock.lock();
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>;) {
+                <span class="hljs-keyword">if</span> (state%<span class="hljs-number">3</span> == <span class="hljs-number">0</span>) {
+                    System.out.println(<span class="hljs-string">&quot;A&quot;</span>);
+                }
+                i++;
+                state++;
+            }
+            lock.unlock();    
+        }        
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> class B extend <span class="hljs-title">Thread</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+            lock.lock();
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>;) {
+                <span class="hljs-keyword">if</span> (state%<span class="hljs-number">3</span> == <span class="hljs-number">1</span>) {
+                    System.out.println(<span class="hljs-string">&quot;B&quot;</span>);
+                }
+                i++;
+                state++;
+            }
+            lock.unlock();    
+        }        
+    }    
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> class C extend <span class="hljs-title">Thread</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+            lock.lock();
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>;) {
+                <span class="hljs-keyword">if</span> (state%<span class="hljs-number">3</span> == <span class="hljs-number">2</span>) {
+                    System.out.println(<span class="hljs-string">&quot;C&quot;</span>);
+                }
+                i++;
+                state++;
+            }
+            lock.unlock();    
+        }        
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">new</span> A().start();
+        <span class="hljs-keyword">new</span> B().start();
+        <span class="hljs-keyword">new</span> C().start();
+    }
+}
+</code></pre>
+<h2 id="4-hashcode&#x4E0E;equals">4. hashCode()&#x4E0E;equals()</h2>
+<p>equals()&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF0C;Object&#x9ED8;&#x8BA4;&#x6BD4;&#x8F83;&#x5BF9;&#x8C61;&#x5730;&#x5740;</p>
+<p>hashCode()&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x54C8;&#x5E0C;&#x7801;&#xFF0C;Object&#x9ED8;&#x8BA4;&#x6839;&#x636E;&#x5BF9;&#x8C61;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x6574;&#x6570;</p>
+<p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x91CD;&#x5199;equals()&#x4E00;&#x5B9A;&#x8981;&#x91CD;&#x5199;hashCode()&#x65B9;&#x6CD5;</strong></p>
+<p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A;HashMap&#x7B49;&#x54C8;&#x5E0C;&#x8868;&#x662F;&#x7531;hashcode()&#x5B9A;&#x4F4D;&#x8981;&#x5B58;&#x653E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x800C;equals()&#x5224;&#x65AD;&#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x903B;&#x8F91;&#x4E0A;equals()&#x76F8;&#x7B49;&#xFF0C;&#x8BA4;&#x4E3A;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x76F8;&#x7B49;&#x5219;&#x5E94;&#x8BE5;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6876;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;hashcode()&#x4E5F;&#x9700;&#x8981;&#x76F8;&#x7B49;&#x3002; </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../JVM/垃圾回收/垃圾回收.html" class="navigation navigation-prev " aria-label="Previous page: 垃圾回收">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="JVM.html" class="navigation navigation-next " aria-label="Next page: JVM">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java","level":"4.1","depth":1,"next":{"title":"JVM","level":"4.2","depth":1,"path":"src/面试真题/JVM.md","ref":"src/面试真题/JVM.md","articles":[]},"previous":{"title":"垃圾回收","level":"3.2","depth":1,"path":"src/JVM/垃圾回收/垃圾回收.md","ref":"src/JVM/垃圾回收/垃圾回收.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"src/面试真题/Java.md","mtime":"2018-07-06T08:03:37.407Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-07T06:54:18.480Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

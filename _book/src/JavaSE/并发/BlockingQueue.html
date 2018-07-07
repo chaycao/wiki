@@ -1,0 +1,888 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>BlockingQueue · wiki</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="chaycao">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../JNI/JNI.html" />
+    
+    
+    <link rel="prev" href="ThreadLocal.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/chaycao" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaSE</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../语法/foreach.html">
+            
+                <a href="../语法/foreach.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    foreach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../语法/反射.html">
+            
+                <a href="../语法/反射.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../语法/多态.html">
+            
+                <a href="../语法/多态.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    并发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="ThreadLocal.html">
+            
+                <a href="ThreadLocal.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    ThreadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.2" data-path="BlockingQueue.html">
+            
+                <a href="BlockingQueue.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../JNI/JNI.html">
+            
+                <a href="../JNI/JNI.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    JNI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JVM</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../JVM/运行时数据区域/运行时数据区域.html">
+            
+                <a href="../../JVM/运行时数据区域/运行时数据区域.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    运行时数据区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../JVM/垃圾回收/垃圾回收.html">
+            
+                <a href="../../JVM/垃圾回收/垃圾回收.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试真题</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../面试真题/Java.html">
+            
+                <a href="../../面试真题/Java.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../面试真题/JVM.html">
+            
+                <a href="../../面试真题/JVM.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../面试真题/SpringMVC.html">
+            
+                <a href="../../面试真题/SpringMVC.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    SpringMVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../面试真题/数据库.html">
+            
+                <a href="../../面试真题/数据库.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../../面试真题/计算机网络.html">
+            
+                <a href="../../面试真题/计算机网络.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../面试真题/算法.html">
+            
+                <a href="../../面试真题/算法.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../面试真题/大数据.html">
+            
+                <a href="../../面试真题/大数据.html">
+            
+                    
+                        <b>4.7.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../Python/环境/">
+            
+                <a href="../../Python/环境/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../Python/环境/包导出.html">
+            
+                <a href="../../Python/环境/包导出.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    包导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../Web/XML.html">
+            
+                <a href="../../Web/XML.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../Linux/常用命令.html">
+            
+                <a href="../../Linux/常用命令.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../Linux/常用命令/文件及目录管理.html">
+            
+                <a href="../../Linux/常用命令/文件及目录管理.html">
+            
+                    
+                        <b>7.1.1.</b>
+                    
+                    文件及目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../../Linux/常用命令/磁盘管理.html">
+            
+                <a href="../../Linux/常用命令/磁盘管理.html">
+            
+                    
+                        <b>7.1.2.</b>
+                    
+                    磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../../Linux/常用命令/进程管理.html">
+            
+                <a href="../../Linux/常用命令/进程管理.html">
+            
+                    
+                        <b>7.1.3.</b>
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../../Linux/常用命令/性能管理.html">
+            
+                <a href="../../Linux/常用命令/性能管理.html">
+            
+                    
+                        <b>7.1.4.</b>
+                    
+                    性能管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../Linux/">
+            
+                <a href="../../Linux/">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    命令详解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../../Linux/命令详解/top.html">
+            
+                <a href="../../Linux/命令详解/top.html">
+            
+                    
+                        <b>7.2.1.</b>
+                    
+                    top
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../../Linux/命令详解/free.html">
+            
+                <a href="../../Linux/命令详解/free.html">
+            
+                    
+                        <b>7.2.2.</b>
+                    
+                    free
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../../Linux/命令详解/vmstat.html">
+            
+                <a href="../../Linux/命令详解/vmstat.html">
+            
+                    
+                        <b>7.2.3.</b>
+                    
+                    vmstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">MySQL</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../MySQL/">
+            
+                <a href="../../MySQL/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    锁
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../MySQL/锁/悲观锁与乐观锁.html">
+            
+                <a href="../../MySQL/锁/悲观锁与乐观锁.html">
+            
+                    
+                        <b>8.1.1.</b>
+                    
+                    悲观锁与乐观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >BlockingQueue</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="blockingqueue">BlockingQueue</h1>
+<p>BlockingQueue &#x7EE7;&#x627F; Queue &#x63A5;&#x53E3;&#x3002;</p>
+<p>&#x63D0;&#x4F9B;&#x4E09;&#x4E2A;&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x6548;&#x679C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add</td>
+<td>&#x6DFB;&#x52A0;&#x6210;&#x529F;&#x8FD4;&#x56DE;True&#xFF0C;&#x6DFB;&#x52A0;&#x5931;&#x8D25;&#x8FD4;&#x56DE;&#x629B;&#x51FA; IllegalStateException &#x5F02;&#x5E38;</td>
+</tr>
+<tr>
+<td>offer</td>
+<td>&#x6DFB;&#x52A0;&#x6210;&#x529F;&#x8FD4;&#x56DE;True&#xFF0C;&#x6DFB;&#x52A0;&#x5931;&#x8D25;&#x8FD4;&#x56DE; False</td>
+</tr>
+<tr>
+<td>put</td>
+<td>&#x82E5;&#x5BB9;&#x91CF;&#x6EE1;&#x4E86;&#x4F1A;&#x963B;&#x585E;&#x76F4;&#x5230;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x63D0;&#x4F9B;&#x4E09;&#x4E2A;&#x5220;&#x9664;&#x5143;&#x7D20;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x6548;&#x679C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>poll</td>
+<td>&#x5220;&#x9664;&#x961F;&#x5217;&#x5934;&#x90E8;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#xFF0C;&#x82E5;&#x961F;&#x5217;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;null</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>&#x57FA;&#x4E8E;&#x5BF9;&#x8C61;&#x627E;&#x5230;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x5220;&#x9664;&#x3002;&#x6210;&#x529F;&#x8FD4;&#x56DE;True&#xFF0C;&#x5931;&#x8D25;&#x8FD4;&#x56DE;False</td>
+</tr>
+<tr>
+<td>take</td>
+<td>&#x5220;&#x9664;&#x961F;&#x5217;&#x5934;&#x90E8;&#x5143;&#x7D20;&#xFF0C;&#x82E5;&#x961F;&#x5217;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x963B;&#x585E;&#x76F4;&#x5230;&#x961F;&#x5217;&#x6709;&#x5143;&#x7D20;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5E38;&#x7528;&#x963B;&#x585E;&#x961F;&#x5217;&#xFF1A;</p>
+<ul>
+<li><p>ArrayBlockingQueue&#xFF1A;&#x57FA;&#x4E8E;&#x5FAA;&#x73AF;&#x6570;&#x7EC4;&#xFF0C;&#x89C4;&#x5B9A;&#x5927;&#x5C0F;&#xFF0C;FIFO&#x987A;&#x5E8F;</p>
+</li>
+<li><p>LinkedBlockingQueue&#xFF1A;&#x57FA;&#x4E8E;&#x5355;&#x5411;&#x94FE;&#x8868;&#xFF0C;&#x5927;&#x5C0F;&#x4E0D;&#x5B9A;&#xFF0C;FIFO&#x987A;&#x5E8F;</p>
+</li>
+<li><p>PriorityBlockingQueue&#xFF1A;&#x57FA;&#x4E8E;&#x5355;&#x5411;&#x94FE;&#x8868;&#xFF0C;&#x5927;&#x5C0F;&#x4E0D;&#x5B9A;&#xFF0C;&#x6309;&#x5BF9;&#x8C61;&#x7684;&#x81EA;&#x7136;&#x6392;&#x5E8F;&#x6216;&#x5176;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;Comparator&#x51B3;&#x5B9A;&#x7684;&#x987A;&#x5E8F;</p>
+</li>
+<li><p>LinkedBlockDeque&#xFF1A;&#x57FA;&#x4E8E;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x7684;&#x53CC;&#x5411;&#x961F;&#x5217;&#xFF0C;&#x5927;&#x5C0F;&#x4E0D;&#x5B9A;</p>
+</li>
+</ul>
+<h2 id="arrayblockingqueue&#x7684;&#x539F;&#x7406;">ArrayBlockingQueue&#x7684;&#x539F;&#x7406;</h2>
+<p>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x53EF;&#x91CD;&#x5165;&#x9501;&#x548C;&#x8BE5;&#x9501;&#x751F;&#x6210;&#x7684;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#xFF08;classic two-condition algorithm&#xFF09;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">final</span> ReentrantLock lock;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Condition notEmpty;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Condition notFull;
+</code></pre>
+<h2 id="linkedblockingqueue&#x7684;&#x539F;&#x7406;">LinkedBlockingQueue&#x7684;&#x539F;&#x7406;</h2>
+<p>&#x4F7F;&#x7528;&#x653E;&#x9501;&#x3001;&#x62FF;&#x9501;&#xFF0C;&#x4E24;&#x4E2A;&#x9501;&#x5B9E;&#x73B0;&#x963B;&#x585E;&#xFF08;&quot;two lock queue&quot; algorithm&#xFF09;</p>
+<p>&#x7531;&#x4E8E;&#x6709;&#x4E24;&#x4E2A;&#x9501;&#xFF0C;&#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x548C;&#x5220;&#x9664;&#x6570;&#x636E;&#x53EF;&#x5E76;&#x884C;&#x8FDB;&#x884C;&#x3002;</p>
+<p>&#x4E0D;&#x4EC5;&#x5728;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x5524;&#x9192;&#x63D2;&#x5165;&#x963B;&#x585E;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x540C;&#x65F6;&#x5728;&#x63D2;&#x5165;&#x7684;&#x540C;&#x65F6;&#x5982;&#x679C;&#x5BB9;&#x91CF;&#x8FD8;&#x6CA1;&#x6EE1;&#xFF0C;&#x4E5F;&#x4F1A;&#x5524;&#x9192;&#x963B;&#x585E;&#x7684;&#x7EBF;&#x7A0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> ReentrantLock takeLock = <span class="hljs-keyword">new</span> ReentrantLock();
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Condition notEmpty = takeLock.newCondition();
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> ReentrantLock putLock = <span class="hljs-keyword">new</span> ReentrantLock();
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Condition notFull = putLock.newCondition();
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ThreadLocal.html" class="navigation navigation-prev " aria-label="Previous page: ThreadLocal">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../JNI/JNI.html" class="navigation navigation-next " aria-label="Next page: JNI">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"BlockingQueue","level":"2.2.2","depth":2,"next":{"title":"JNI","level":"2.3","depth":1,"path":"src/JavaSE/JNI/JNI.md","ref":"src/JavaSE/JNI/JNI.md","articles":[]},"previous":{"title":"ThreadLocal","level":"2.2.1","depth":2,"path":"src/JavaSE/并发/ThreadLocal.md","ref":"src/JavaSE/并发/ThreadLocal.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"src/JavaSE/并发/BlockingQueue.md","mtime":"2018-06-03T17:01:42.957Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-07T06:54:18.480Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

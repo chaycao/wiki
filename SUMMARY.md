@@ -3,38 +3,47 @@
 * [Introduction](README.md)
 
 ## JavaSE
-* [语法](1.JavaSE/README.md)
-    * [foreach](1.JavaSE/1.语法/1.foreach.md)
-    * [反射](1.JavaSE/1.语法/2.反射.md)
-    * [多态](1.JavaSE/1.语法/3.多态.md)
-* [并发](1.JavaSE/2.并发/README.md)
-    * [ThreadLocal](1.JavaSE/2.并发/1.ThreadLocal.md)
-    * [BlockingQueue](1.JavaSE/2.并发/2.BlockingQueue.md)
-* [JNI](1.JavaSE/3.JNI/JNI.md)
-
-## Python
-* [环境](2.Python/1.环境/README.md)
-    * [包导出](2.Python/1.环境/1.包导出.md)
-
-## Web
-* [XML](3.Web/1.XML.md)
+* [语法](src/JavaSE/README.md)
+    * [foreach](src/JavaSE/语法/foreach.md)
+    * [反射](src/JavaSE/语法/反射.md)
+    * [多态](src/JavaSE/语法/多态.md)
+* [并发](src/JavaSE/并发/README.md)
+    * [ThreadLocal](src/JavaSE/并发/ThreadLocal.md)
+    * [BlockingQueue](src/JavaSE/并发/BlockingQueue.md)
+* [JNI](src/JavaSE/JNI/JNI.md)
 
 ## JVM
-* [运行时数据区域](4.JVM/1.运行时数据区域/运行时数据区域.md)
-* [垃圾回收](4.JVM/2.垃圾回收/垃圾回收.md)
+* [运行时数据区域](src/JVM/运行时数据区域/运行时数据区域.md)
+* [垃圾回收](src/JVM/垃圾回收/垃圾回收.md)
+
+## 面试真题
+* [Java](src/面试真题/Java.md)
+* [JVM](src/面试真题/JVM.md)
+* [SpringMVC](src/面试真题/SpringMVC.md)
+* [数据库](src/面试真题/数据库.md)
+* [计算机网络](src/面试真题/计算机网络.md)
+* [算法](src/面试真题/算法.md)
+* [大数据](src/面试真题/大数据.md)
+
+## Python
+* [环境](src/Python/环境/README.md)
+    * [包导出](src/Python/环境/包导出.md)
+
+## Web
+* [XML](src/Web/XML.md)
 
 ## Linux
-* [常用命令](5.Linux/常用命令.md)
-    * [文件及目录管理](5.Linux/1.常用命令/1.文件及目录管理.md)
-    * [磁盘管理](5.Linux/1.常用命令/2.磁盘管理.md)
-    * [进程管理](5.Linux/1.常用命令/3.进程管理.md)
-    * [性能管理](5.Linux/1.常用命令/4.性能管理.md)
-* [命令详解](5.Linux/README.md)
-    * [top](5.Linux/命令详解/1.top.md)
-    * [free](5.Linux/命令详解/2.free.md)
-    * [vmstat](5.Linux/命令详解/3.vmstat.md)
+* [常用命令](src/Linux/常用命令.md)
+    * [文件及目录管理](src/Linux/常用命令/文件及目录管理.md)
+    * [磁盘管理](src/Linux/常用命令/磁盘管理.md)
+    * [进程管理](src/Linux/常用命令/进程管理.md)
+    * [性能管理](src/Linux/常用命令/性能管理.md)
+* [命令详解](src/Linux/README.md)
+    * [top](src/Linux/命令详解/top.md)
+    * [free](src/Linux/命令详解/free.md)
+    * [vmstat](src/Linux/命令详解/vmstat.md)
 
 ## MySQL
-* [锁](6.MySQL/README.md)
-    * [悲观锁与乐观锁](6.MySQL/1.锁/1.悲观锁与乐观锁.md)
+* [锁](src/MySQL/README.md)
+    * [悲观锁与乐观锁](src/MySQL/锁/悲观锁与乐观锁.md)
 

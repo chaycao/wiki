@@ -1,0 +1,964 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>悲观锁与乐观锁 · wiki</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="chaycao">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/chaycao" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaSE</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../JavaSE/">
+            
+                <a href="../../JavaSE/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../JavaSE/语法/foreach.html">
+            
+                <a href="../../JavaSE/语法/foreach.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    foreach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../JavaSE/语法/反射.html">
+            
+                <a href="../../JavaSE/语法/反射.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../JavaSE/语法/多态.html">
+            
+                <a href="../../JavaSE/语法/多态.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../JavaSE/并发/">
+            
+                <a href="../../JavaSE/并发/">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    并发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../JavaSE/并发/ThreadLocal.html">
+            
+                <a href="../../JavaSE/并发/ThreadLocal.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    ThreadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../JavaSE/并发/BlockingQueue.html">
+            
+                <a href="../../JavaSE/并发/BlockingQueue.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    BlockingQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../JavaSE/JNI/JNI.html">
+            
+                <a href="../../JavaSE/JNI/JNI.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    JNI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JVM</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../JVM/运行时数据区域/运行时数据区域.html">
+            
+                <a href="../../JVM/运行时数据区域/运行时数据区域.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    运行时数据区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../JVM/垃圾回收/垃圾回收.html">
+            
+                <a href="../../JVM/垃圾回收/垃圾回收.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试真题</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../面试真题/Java.html">
+            
+                <a href="../../面试真题/Java.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../面试真题/JVM.html">
+            
+                <a href="../../面试真题/JVM.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../面试真题/SpringMVC.html">
+            
+                <a href="../../面试真题/SpringMVC.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    SpringMVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../面试真题/数据库.html">
+            
+                <a href="../../面试真题/数据库.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../../面试真题/计算机网络.html">
+            
+                <a href="../../面试真题/计算机网络.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../面试真题/算法.html">
+            
+                <a href="../../面试真题/算法.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../面试真题/大数据.html">
+            
+                <a href="../../面试真题/大数据.html">
+            
+                    
+                        <b>4.7.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../Python/环境/">
+            
+                <a href="../../Python/环境/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../Python/环境/包导出.html">
+            
+                <a href="../../Python/环境/包导出.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    包导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../Web/XML.html">
+            
+                <a href="../../Web/XML.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../Linux/常用命令.html">
+            
+                <a href="../../Linux/常用命令.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../Linux/常用命令/文件及目录管理.html">
+            
+                <a href="../../Linux/常用命令/文件及目录管理.html">
+            
+                    
+                        <b>7.1.1.</b>
+                    
+                    文件及目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../../Linux/常用命令/磁盘管理.html">
+            
+                <a href="../../Linux/常用命令/磁盘管理.html">
+            
+                    
+                        <b>7.1.2.</b>
+                    
+                    磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../../Linux/常用命令/进程管理.html">
+            
+                <a href="../../Linux/常用命令/进程管理.html">
+            
+                    
+                        <b>7.1.3.</b>
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../../Linux/常用命令/性能管理.html">
+            
+                <a href="../../Linux/常用命令/性能管理.html">
+            
+                    
+                        <b>7.1.4.</b>
+                    
+                    性能管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../Linux/">
+            
+                <a href="../../Linux/">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    命令详解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../../Linux/命令详解/top.html">
+            
+                <a href="../../Linux/命令详解/top.html">
+            
+                    
+                        <b>7.2.1.</b>
+                    
+                    top
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../../Linux/命令详解/free.html">
+            
+                <a href="../../Linux/命令详解/free.html">
+            
+                    
+                        <b>7.2.2.</b>
+                    
+                    free
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../../Linux/命令详解/vmstat.html">
+            
+                <a href="../../Linux/命令详解/vmstat.html">
+            
+                    
+                        <b>7.2.3.</b>
+                    
+                    vmstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">MySQL</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    锁
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="8.1.1" data-path="悲观锁与乐观锁.html">
+            
+                <a href="悲观锁与乐观锁.html">
+            
+                    
+                        <b>8.1.1.</b>
+                    
+                    悲观锁与乐观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >悲观锁与乐观锁</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x60B2;&#x89C2;&#x9501;&#x4E0E;&#x4E50;&#x89C2;&#x9501;">&#x60B2;&#x89C2;&#x9501;&#x4E0E;&#x4E50;&#x89C2;&#x9501;</h1>
+<h2 id="&#x6982;&#x5FF5;">&#x6982;&#x5FF5;</h2>
+<p>&#x4E50;&#x89C2;&#x9501;&#xFF08;&#x4E50;&#x89C2;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#xFF09;&#x548C;&#x60B2;&#x89C2;&#x9501;&#xFF08;&#x60B2;&#x89C2;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#xFF09;&#x662F;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#x4E3B;&#x8981;&#x91C7;&#x7528;&#x7684;&#x6280;&#x672F;&#x624B;&#x6BB5;&#x3002;</p>
+<p>&#x53EF;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x79CD;&#x601D;&#x60F3;&#x3002;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#xFF0C;&#x5E94;&#x9009;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#x3002;</p>
+<p>&#x4E0D;&#x8981;&#x5C06;&#x5176;&#x4E0E;&#x9501;&#x673A;&#x5236;&#xFF08;&#x884C;&#x9501;&#x3001;&#x8868;&#x9501;&#x3001;&#x6392;&#x5B83;&#x9501;&#x3001;&#x5171;&#x4EAB;&#x9501;&#xFF09;&#x6DF7;&#x4E3A;&#x4E00;&#x8C08;</p>
+<ul>
+<li><strong>&#x60B2;&#x89C2;&#x9501;</strong>&#xFF1A;&#x5047;&#x5B9A;&#x4F1A;&#x53D1;&#x751F;&#x5E76;&#x53D1;&#x51B2;&#x7A81;&#xFF0C;&#x5C4F;&#x853D;&#x4E00;&#x5207;&#x53EF;&#x80FD;&#x8FDD;&#x53CD;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x7684;&#x64CD;&#x4F5C;&#xFF08;&#x4E00;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E0A;&#x9501;&#xFF09;<ul>
+<li>&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x6570;&#x636E;&#x4E89;&#x7528;&#x6FC0;&#x70C8;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x4EE5;&#x53CA;&#x53D1;&#x751F;&#x5E76;&#x53D1;&#x51B2;&#x7A81;&#x65F6;&#x4F7F;&#x7528;&#x9501;&#x4FDD;&#x62A4;&#x6570;&#x636E;&#x7684;&#x6210;&#x672C;&#x8981;&#x4F4E;&#x4E8E;&#x56DE;&#x6EDA;&#x4E8B;&#x52A1;&#x7684;&#x6210;&#x672C;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x3002; </li>
+<li>&#x4F8B;&#x5B50;&#xFF1A;Java <code>synchronized</code>&#x5C5E;&#x4E8E;&#x60B2;&#x89C2;&#x9501;&#x7684;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;</li>
+</ul>
+</li>
+<li><strong>&#x4E50;&#x89C2;&#x9501;</strong>&#xFF1A;&#x5047;&#x5B9A;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x5E76;&#x53D1;&#x51B2;&#x7A81;&#xFF0C;&#x53EA;&#x5728;&#x63D0;&#x4EA4;&#x64CD;&#x4F5C;&#x65F6;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x8FDD;&#x53CD;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x82E5;&#x5176;&#x4ED6;&#x4E8B;&#x52A1;&#x6709;&#x66F4;&#x65B0;&#x7684;&#x8BDD;&#xFF0C;&#x6B63;&#x5728;&#x63D0;&#x4EA4;&#x7684;&#x4E8B;&#x52A1;&#x8FDB;&#x884C;&#x8FDB;&#x884C;&#x56DE;&#x6EDA;&#x3002;<ul>
+<li>&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x8BFB;&#x591A;&#x5199;&#x5C11;&#xFF0C;&#x53EF;&#x63D0;&#x9AD8;&#x541E;&#x5410;&#x91CF;</li>
+<li>&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF1A;&#xFF08;1&#xFF09;&#x6570;&#x636E;&#x7248;&#x672C;&#xFF08;version&#xFF09;&#xFF1B;&#xFF08;2&#xFF09;&#x65F6;&#x95F4;&#x6233;&#xFF08;timestamp&#xFF09;</li>
+<li>&#x4F8B;&#x5B50;&#xFF1A;Java&#x4E2D;&#x7684;atomic&#x5305;&#xFF0C;AtomicInteger&#x901A;&#x8FC7;CAS&#x64CD;&#x4F5C;&#x5B9E;&#x73B0;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x81EA;&#x589E;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="mysql&#x4E2D;&#x4F7F;&#x7528;">MySQL&#x4E2D;&#x4F7F;&#x7528;</h2>
+<h3 id="mysql-innodb&#x4E2D;&#x4F7F;&#x7528;&#x60B2;&#x89C2;&#x9501;">MySQL InnoDB&#x4E2D;&#x4F7F;&#x7528;&#x60B2;&#x89C2;&#x9501;</h3>
+<p>&#x9996;&#x5148;&#x5173;&#x95ED;MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;&#x5C5E;&#x6027;&#xFF0C;<code>set autocommit=0;</code></p>
+<pre><code class="lang-sql">//0.&#x5F00;&#x59CB;&#x4E8B;&#x52A1;
+<span class="hljs-keyword">begin</span>;
+//1.&#x67E5;&#x8BE2;&#x51FA;&#x5546;&#x54C1;&#x4FE1;&#x606F;
+<span class="hljs-keyword">select</span> <span class="hljs-keyword">status</span> <span class="hljs-keyword">from</span> t_goods <span class="hljs-keyword">where</span> <span class="hljs-keyword">id</span>=<span class="hljs-number">1</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">update</span>;
+//2.&#x6839;&#x636E;&#x5546;&#x54C1;&#x4FE1;&#x606F;&#x751F;&#x6210;&#x8BA2;&#x5355;
+<span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> t_orders (<span class="hljs-keyword">id</span>,goods_id) <span class="hljs-keyword">values</span> (<span class="hljs-literal">null</span>,<span class="hljs-number">1</span>);
+//3.&#x4FEE;&#x6539;&#x5546;&#x54C1;status&#x4E3A;2
+<span class="hljs-keyword">update</span> t_goods <span class="hljs-keyword">set</span> <span class="hljs-keyword">status</span>=<span class="hljs-number">2</span>;
+//4.&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;
+<span class="hljs-keyword">commit</span>;
+</code></pre>
+<p>&#x5728;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;<code>select ... for update</code>&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x5F00;&#x542F;<strong>&#x6392;&#x5B83;&#x9501;</strong>&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x60B2;&#x89C2;&#x9501;&#x3002;</p>
+<p>&#x4F46;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;InnoDB &#x9ED8;&#x8BA4;&#x884C;&#x7EA7;&#x9501;&#xFF0C;&#x884C;&#x7EA7;&#x9501;&#x662F;&#x57FA;&#x4E8E;&#x7D22;&#x5F15;&#x7684;&#xFF0C;&#x5982;&#x679C;SQL&#x8BED;&#x53E5;&#x672A;&#x7528;&#x5230;&#x7D22;&#x5F15;&#x662F;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x884C;&#x7EA7;&#x9501;&#x7684;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x8868;&#x7EA7;&#x9501;&#x628A;&#x6574;&#x5F20;&#x8868;&#x9501;&#x4F4F;&#x3002;</p>
+<p><strong>&#x4F18;&#x70B9;</strong>&#xFF1A;</p>
+<ul>
+<li>&#x4E3A;&#x6570;&#x636E;&#x5904;&#x7406;&#x7684;&#x5B89;&#x5168;&#x63D0;&#x4F9B;&#x4FDD;&#x8BC1;</li>
+</ul>
+<p><strong>&#x7F3A;&#x70B9;</strong>&#xFF1A;</p>
+<ul>
+<li>&#x56E0;&#x52A0;&#x9501;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x4EA7;&#x751F;&#x989D;&#x5916;&#x5F00;&#x9500;</li>
+<li>&#x589E;&#x52A0;&#x4EA7;&#x751F;&#x6B7B;&#x9501;&#x7684;&#x673A;&#x4F1A;</li>
+<li>&#x82E5;&#x5728;&#x53EA;&#x8BFB;&#x578B;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x4E2D;&#x7531;&#x4E8E;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x51B2;&#x7A81;&#xFF0C;&#x6CA1;&#x5FC5;&#x8981;&#x4F7F;&#x7528;&#x9501;&#xFF0C;&#x4F1A;&#x589E;&#x52A0;&#x7CFB;&#x7EDF;&#x8D1F;&#x8F7D;&#xFF0C;&#x964D;&#x4F4E;&#x5E76;&#x884C;&#x6027;</li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;&#x7248;&#x672C;&#x53F7;&#x5B9E;&#x73B0;&#x4E50;&#x89C2;&#x9501;">&#x4F7F;&#x7528;&#x7248;&#x672C;&#x53F7;&#x5B9E;&#x73B0;&#x4E50;&#x89C2;&#x9501;</h3>
+<p>&#x4F7F;&#x7528;&#x7248;&#x672C;&#x53F7;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6570;&#x636E;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x6BCF;&#x6B21;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x90FD;&#x5BF9;&#x7248;&#x672C;&#x53F7;&#x6267;&#x884C;+1&#x64CD;&#x4F5C;&#x3002;&#x5E76;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x7248;&#x672C;&#x53F7;&#x662F;&#x4E0D;&#x662F;&#x8BE5;&#x6570;&#x636E;&#x7684;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;&#x53F7;&#x3002; </p>
+<pre><code class="lang-sql">1.&#x67E5;&#x8BE2;&#x51FA;&#x5546;&#x54C1;&#x4FE1;&#x606F;
+<span class="hljs-keyword">select</span> (<span class="hljs-keyword">status</span>,<span class="hljs-keyword">status</span>,<span class="hljs-keyword">version</span>) <span class="hljs-keyword">from</span> t_goods <span class="hljs-keyword">where</span> <span class="hljs-keyword">id</span>=#{<span class="hljs-keyword">id</span>}
+<span class="hljs-number">2.</span>&#x6839;&#x636E;&#x5546;&#x54C1;&#x4FE1;&#x606F;&#x751F;&#x6210;&#x8BA2;&#x5355;
+<span class="hljs-number">3.</span>&#x4FEE;&#x6539;&#x5546;&#x54C1;<span class="hljs-keyword">status</span>&#x4E3A;<span class="hljs-number">2</span>
+<span class="hljs-keyword">update</span> t_goods 
+<span class="hljs-keyword">set</span> <span class="hljs-keyword">status</span>=<span class="hljs-number">2</span>,<span class="hljs-keyword">version</span>=<span class="hljs-keyword">version</span>+<span class="hljs-number">1</span>
+<span class="hljs-keyword">where</span> <span class="hljs-keyword">id</span>=#{<span class="hljs-keyword">id</span>} <span class="hljs-keyword">and</span> <span class="hljs-keyword">version</span>=#{<span class="hljs-keyword">version</span>};
+</code></pre>
+<hr>
+<h2 id="&#x5177;&#x4F53;&#x6848;&#x4F8B;">&#x5177;&#x4F53;&#x6848;&#x4F8B;</h2>
+<p>&#x8003;&#x8651;&#x7535;&#x5546;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4E0B;&#x5355;&#x6D41;&#x7A0B;&#xFF0C;&#x5546;&#x54C1;&#x7684;&#x5E93;&#x5B58;&#x91CF;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x5546;&#x54C1;&#x6570;&#x91CF;&#x4E0D;&#x8D85;&#x5356;&#xFF1F; &#x5176;&#x5B9E;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#xFF1A;&#x67D0;&#x4E2A;&#x4EBA;&#x70B9;&#x51FB;&#x79D2;&#x6740;&#x540E;&#x7CFB;&#x7EDF;&#x4E2D;&#x67E5;&#x51FA;&#x6765;&#x7684;&#x5E93;&#x5B58;&#x91CF;&#x548C;&#x5B9E;&#x9645;&#x6263;&#x51CF;&#x5E93;&#x5B58;&#x65F6;&#x5E93;&#x5B58;&#x91CF;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x5C31;&#x53EF;&#x4EE5;&#x3002; </p>
+<p>&#x5047;&#x8BBE;&#xFF0C;MySQL&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5546;&#x54C1;&#x5E93;&#x5B58;&#x8868;tb_product_stock &#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`tb_product_stock`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">bigint</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x81EA;&#x589E;ID&apos;</span>,
+  <span class="hljs-string">`product_id`</span> <span class="hljs-built_in">bigint</span>(<span class="hljs-number">32</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x5546;&#x54C1;ID&apos;</span>,
+  <span class="hljs-string">`number`</span> <span class="hljs-built_in">INT</span>(<span class="hljs-number">8</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-number">0</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x5E93;&#x5B58;&#x6570;&#x91CF;&apos;</span>,
+  <span class="hljs-string">`create_time`</span> DATETIME <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</span>,
+  <span class="hljs-string">`modify_time`</span> DATETIME <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>),
+  <span class="hljs-keyword">UNIQUE</span> <span class="hljs-keyword">KEY</span> <span class="hljs-string">`index_pid`</span> (<span class="hljs-string">`product_id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8 <span class="hljs-keyword">COMMENT</span>=<span class="hljs-string">&apos;&#x5546;&#x54C1;&#x5E93;&#x5B58;&#x8868;&apos;</span>;
+</code></pre>
+<p>&#x5BF9;&#x5E94;&#x7684;POJO&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProductStock</span> </span>{
+    <span class="hljs-keyword">private</span> Long productId; <span class="hljs-comment">//&#x5546;&#x54C1;id</span>
+    <span class="hljs-keyword">private</span> Integer number; <span class="hljs-comment">//&#x5E93;&#x5B58;&#x91CF;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Long <span class="hljs-title">getProductId</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> productId;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setProductId</span><span class="hljs-params">(Long productId)</span> </span>{
+        <span class="hljs-keyword">this</span>.productId = productId;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Integer <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> number;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setNumber</span><span class="hljs-params">(Integer number)</span> </span>{
+        <span class="hljs-keyword">this</span>.number = number;
+    }
+}
+</code></pre>
+<p>&#x4E0D;&#x8003;&#x8651;&#x5E76;&#x53D1;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x66F4;&#x65B0;&#x5E93;&#x5B58;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+* &#x66F4;&#x65B0;&#x5E93;&#x5B58;(&#x4E0D;&#x8003;&#x8651;&#x5E76;&#x53D1;)
+* <span class="hljs-doctag">@param</span> productId
+* <span class="hljs-doctag">@return</span>
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">updateStockRaw</span><span class="hljs-params">(Long productId)</span></span>{
+    ProductStock product = query(<span class="hljs-string">&quot;SELECT * FROM tb_product_stock WHERE product_id=#{productId}&quot;</span>, productId);
+    <span class="hljs-keyword">if</span> (product.getNumber() &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">int</span> updateCnt = update(<span class="hljs-string">&quot;UPDATE tb_product_stock SET number=number-1 WHERE product_id=#{productId}&quot;</span>, productId);
+        <span class="hljs-keyword">if</span>(updateCnt &gt; <span class="hljs-number">0</span>){    <span class="hljs-comment">//&#x66F4;&#x65B0;&#x5E93;&#x5B58;&#x6210;&#x529F;</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+</code></pre>
+<p>&#x591A;&#x7EBF;&#x7A0B;&#x5E76;&#x53D1;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x5B58;&#x5728;&#x8D85;&#x5356;&#x7684;&#x53EF;&#x80FD;&#x3002;</p>
+<h3 id="&#x60B2;&#x89C2;&#x9501;">&#x60B2;&#x89C2;&#x9501;</h3>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+* &#x66F4;&#x65B0;&#x5E93;&#x5B58;(&#x4F7F;&#x7528;&#x60B2;&#x89C2;&#x9501;)
+* <span class="hljs-doctag">@param</span> productId
+* <span class="hljs-doctag">@return</span>
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">updateStock</span><span class="hljs-params">(Long productId)</span></span>{
+    <span class="hljs-comment">//&#x5148;&#x9501;&#x5B9A;&#x5546;&#x54C1;&#x5E93;&#x5B58;&#x8BB0;&#x5F55;</span>
+    ProductStock product = query(<span class="hljs-string">&quot;SELECT * FROM tb_product_stock WHERE product_id=#{productId} FOR UPDATE&quot;</span>, productId);
+    <span class="hljs-keyword">if</span> (product.getNumber() &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">int</span> updateCnt = update(<span class="hljs-string">&quot;UPDATE tb_product_stock SET number=number-1 WHERE product_id=#{productId}&quot;</span>, productId);
+        <span class="hljs-keyword">if</span>(updateCnt &gt; <span class="hljs-number">0</span>){    <span class="hljs-comment">//&#x66F4;&#x65B0;&#x5E93;&#x5B58;&#x6210;&#x529F;</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+</code></pre>
+<h3 id="&#x4E50;&#x89C2;&#x9501;">&#x4E50;&#x89C2;&#x9501;</h3>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+* &#x4E0B;&#x5355;&#x51CF;&#x5E93;&#x5B58;
+* <span class="hljs-doctag">@param</span> productId
+* <span class="hljs-doctag">@return</span>
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">updateStock</span><span class="hljs-params">(Long productId)</span></span>{
+    <span class="hljs-keyword">int</span> updateCnt = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (updateCnt == <span class="hljs-number">0</span>) {
+        ProductStock product = query(<span class="hljs-string">&quot;SELECT * FROM tb_product_stock WHERE product_id=#{productId}&quot;</span>, productId);
+        <span class="hljs-keyword">if</span> (product.getNumber() &gt; <span class="hljs-number">0</span>) {
+            updateCnt = update(<span class="hljs-string">&quot;UPDATE tb_product_stock SET number=number-1 WHERE product_id=#{productId} AND number=#{number}&quot;</span>, productId, product.getNumber());
+            <span class="hljs-keyword">if</span>(updateCnt &gt; <span class="hljs-number">0</span>){    <span class="hljs-comment">//&#x66F4;&#x65B0;&#x5E93;&#x5B58;&#x6210;&#x529F;</span>
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+        } <span class="hljs-keyword">else</span> {    <span class="hljs-comment">//&#x5356;&#x5B8C;&#x5566;</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x4E50;&#x89C2;&#x9501;&#x66F4;&#x65B0;&#x5E93;&#x5B58;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x52A0;&#x9501;&#xFF0C;&#x5F53;&#x63D0;&#x4EA4;&#x66F4;&#x65B0;&#x65F6;&#x9700;&#x8981;&#x5224;&#x65AD;&#x6570;&#x636E;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x4FEE;&#x6539;&#xFF08;AND number=#{number}&#xFF09;&#xFF0C;&#x53EA;&#x6709;&#x5728; number&#x7B49;&#x4E8E;&#x4E0A;&#x4E00;&#x6B21;&#x67E5;&#x8BE2;&#x5230;&#x7684;number&#x65F6; &#x624D;&#x63D0;&#x4EA4;&#x66F4;&#x65B0;&#x3002; </p>
+<p>&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x6807;&#x662F;&#x786E;&#x4FDD;&#x5E93;&#x5B58;&#x4E0D;&#x80FD;&#x88AB;&#x6263;&#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x4FEE;&#x6539;&#x6210; UPDATE tb_product_stock SET number=number-1 WHERE product_id=#{productId} AND number &gt; 0; &#x6548;&#x7387;&#x4F1A;&#x6539;&#x5584; </p>
+<h2 id="&#x53C2;&#x8003;&#x6587;&#x732E;">&#x53C2;&#x8003;&#x6587;&#x732E;</h2>
+<ol>
+<li><a href="http://www.hollischuang.com/archives/934" target="_blank">&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4E50;&#x89C2;&#x9501;&#x4E0E;&#x60B2;&#x89C2;&#x9501;</a></li>
+<li><a href="https://www.jianshu.com/p/f5ff017db62a" target="_blank">MySQL &#x4E50;&#x89C2;&#x9501;&#x4E0E;&#x60B2;&#x89C2;&#x9501;</a></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 锁">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"悲观锁与乐观锁","level":"8.1.1","depth":2,"previous":{"title":"锁","level":"8.1","depth":1,"path":"src/MySQL/README.md","ref":"src/MySQL/README.md","articles":[{"title":"悲观锁与乐观锁","level":"8.1.1","depth":2,"path":"src/MySQL/锁/悲观锁与乐观锁.md","ref":"src/MySQL/锁/悲观锁与乐观锁.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"src/MySQL/锁/悲观锁与乐观锁.md","mtime":"2018-06-21T13:52:20.247Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-07T06:54:18.480Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
