@@ -208,3 +208,174 @@ hashCode()方法用来获取哈希码，Object默认根据对象地址转换成�
 **为什么重写equals()一定要重写hashCode()方法**
 
 这是因为HashMap等哈希表是由hashcode()定位要存放的位置，而equals()判断是否相等，这意味着逻辑上equals()相等，认为这两个对象相等则应该放在同一个桶中，所以hashcode()也需要相等。 
+
+**hashCode的作用**
+
+用于查找，在HashMap、HashTable等散列表中用hashCode确定对象的存储地址。
+
+
+
+## 5. Java内存模型
+
+Java内存模型（JMM）是一种虚拟机规范，定义了多线程之间共享变量的可见性。采用的是共享内存模型，**线程之间的共享变量存储在主内存中，每个线程都有一个私有的本地内存，本地内存中存储了该线程读\写共享变量的副本**。
+
+![JMM](images/JMM.jpg)
+
+
+
+## 6. Object的公用方法
+
+- toString()
+- equals()
+- hashCode()
+- wait()、notify()、notifyAll()
+- clone()
+- getClass()
+- finalize()
+
+
+
+## 7. String、StringBuffer、StringBuilder
+
+- **String**：不可变对象，每次改变相当于生成新的String对象
+- **StringBuffer**：可变对象，线程安全
+- **StringBuilder**：可变对象，线程不安全，速度比StringBuffer快
+
+
+
+## 8. 创建对象的方式
+
+1. 用 new 语句创建对象
+2. 反射，调用 java.lang.Class 或 java.lang.reflect.Constructor 类的 newInstance() 实例方法
+3. 调用对象的 clone() 方法
+4. 反序列化，通过 java.io.ObjectInputStream 对象的 readObject() 方法
+
+1、2会调用构造函数
+
+3 是在内存上对已有对象的影印，不会调用构造函数
+
+4 是从文件中还原，不会调用构造函数
+
+
+
+## 9. try里有return，finally是否执行
+
+会执行，在return表达式之后执行，返回之前执行
+
+finally里的修改语句可能影响也可能不影响try或catch中 return已经确定的返回值，若finally里也有return语句则覆盖try或catch中的return语句直接返回。 
+
+[参考](http://www.cnblogs.com/lanxuezaipiao/p/3440471.html)
+
+
+
+## 10. Exception与Error的结构
+
+![Exception类结构](images/Exception类结构.png)
+
+
+
+## 11. Java面向对象的三个特征和含义
+
+**封装**：**把数据和方法绑定起来，对数据的访问只能通过已定义的接口**，也就是隐藏一切可隐藏的东西，只向外界提供最简单的编程接口Java的四种访问控制符：public，default，protected，private 
+
+**继承**：**从已有类得到继承信息创建新类的过程**。提供继承信息的类称为父类；得到继承信息的类称为子类继承使变化中的软件系统具有一定的延续性，同时继承使封装程序中具有扩展性Java中的extends（用于基本类和抽象类）和implements（用于接口），extends单继承，implements不限 
+
+**多态**：**允许不同子类型的对象对同一消息做出不同响应**，也就是用同样的对象引用调用同样的方法但做了不同的事。分为
+
+- 编译时多态：方法重载（overload，用于一个类内实现若干重载的方法，这些方法名称相同而参数形式不同）
+- 运行时多态：方法重写（覆盖，override，用于子类继承父类时，重新实现父类中的方法） 
+
+
+
+## 12. Interface 与 Abstart 的区别
+
+两者的特性：
+
+- 抽象类：用来捕捉子类的通用特性。不能被实例化，只能作为子类的超类，被用来创建继承层级里子类的模板
+- 接口：抽象方法的集合，像契约模式，若实现该接口，则必须确保使用接口中的方法对比： 
+
+| 参数         |                          抽象类                           | 接口                                       |
+| ------------ | :-------------------------------------------------------: | ------------------------------------------ |
+| 默认方法实现 |                           可以                            | 不可以                                     |
+| 实现         | extends关键字。若子类不是抽象类，需提供所有声明方法的实现 | implements关键字。需提供所有声明方法的实现 |
+| 构造器       |                          可以有                           | 可以有                                     |
+| 访问修饰符   |            public、protected、default、private            | 默认public不可以其他                       |
+| main方法     |                          可以有                           | 不可以                                     |
+
+
+
+## 13. 静态内部类 与 非静态内部类 区别
+
+- 静态内部类：不需要有指向外部类对象的引用；可以访问静态成员
+- 非静态内部类：需要有指向外部类对象的引用；可以访问静态成员和非静态成员； 
+
+
+
+## 14. 多态的实现原理
+
+[参考](../JavaSE/语法/多态.md)
+
+
+
+## 15. ThreadLocal的设计理念和作用
+
+[参考](../JavaSE/并发/ThreadLocal.md)
+
+
+
+## 16. foreach
+
+效率 还是得看普通for里的具体操作
+
+对于ArrayList，普通for快一点，减少了“解除语法糖”的操作
+
+对于LinkedList，linkedlist.get(）每次都从头开始了，foreach就快很多，
+
+foreach能使用的类型：数组、java.lang.Iterable
+
+- 数组：转化为对数组中每个元素的循环引用
+- Iterable接口，调用next()、hasNext()方法做循环遍历
+
+
+
+## 17. 反射的实现原理
+
+[参考](../JavaSE/语法/反射.md)
+
+
+
+## 18. synchronized
+
+synchronized 是Java中的关键字，可以控制多线程对共享资源的访问。在Java中每一个对象都可以作为锁
+
+当synchronized作用于以下三种情况：
+
+- 对于普通同步方法，锁是当前实例对象
+- 对于静态同步方法，锁是当前类的Class对象
+- 对于同步方法块，锁是Synchronized括号里配置的对象
+
+**实现原理**：
+
+JVM 基于进入和退出 Monitor 对象来实现方法同步、代码块同步
+
+代码块同步：使用 monitorenter、monitorexit 指令实现
+
+方法同步：方法调用指令读取运行时常量池中方法的 ACC_SYNCHRONIZED 标志辨别是否为同步方法
+
+
+
+## 19. Socket 编程
+
+服务端：
+
+1. 构建一个 ServerSocket 实例，指定本地端口，该 socket监听指定端口的连接请求
+2. 重复以下步骤：
+   1. 调用 accept() 方法获得客户端的连接请求，通过 accept() 方法返回的 socket 实例，建立一个和客户端的新连接
+   2. 通过返回的 socket 实例获取 InputStream 和 OutputStream 来读写数据
+   3. 通过 close() 方法关闭 socket 连接
+
+客户端：
+
+1. 构建 Socket 实例，通过制定的远程服务器和端口建立连接
+2. 通过 Socket 实例包含的 InputStream 和 OutputStream 来进行数据的读写
+3. 操作结束调用 socket 实例的 close 方法。
