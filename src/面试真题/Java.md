@@ -268,9 +268,33 @@ finally里的修改语句可能影响也可能不影响try或catch中 return已�
 
 
 
-## 10. Exception与Error的结构
+## 10. Exception与Error
 
 ![Exception类结构](images/Exception类结构.png)
+
+**联系：**
+
+- Error和Exception都继承于 Throwable 接口，RuntimeException 继承自 Exception
+- Error和RuntimeException及其子类称为未检查异常（Unchecked exception），其他异常为受检查异常
+
+**区别：**
+
+- Error类，
+  - 指与虚拟机相关的问题，如系统崩溃、虚拟机错误、内存空间不足、栈溢出等，java.lang.StackOverFlowError、java.lang.OutOfMemoryError
+  - 编译器不检查
+  - 导致的应用程序中断，仅靠程序本身无法恢复和预防，建议让程序终止
+- Exception类
+  - 程序可以处理的异常，可以捕获且可能恢复
+  - 遇到这类异常，应该尽可能处理
+
+
+
+运行时异常和受检查异常
+
+- 运行时异常：Java编译器不检查，如果出现运行时异常，一定是程序问题，如除数为0、错误的类型转换、数组越界访问、试图访问空指针
+- 受检查异常：如果没有try..catch或throws，编译不通过，不是程序本身错误，而是应用环境中出现的外部问题
+
+
 
 
 
@@ -379,3 +403,250 @@ JVM 基于进入和退出 Monitor 对象来实现方法同步、代码块同步
 1. 构建 Socket 实例，通过制定的远程服务器和端口建立连接
 2. 通过 Socket 实例包含的 InputStream 和 OutputStream 来进行数据的读写
 3. 操作结束调用 socket 实例的 close 方法。
+
+
+
+## 20. Java 读文件的几种方式
+
+1. 按字节读取
+2. 按字符读取
+3. 按行读取
+4. 随机读取
+
+[参考](http://www.cnblogs.com/lovebread/archive/2009/11/23/1609122.html)
+
+
+
+## 21. 防止表单重复提交
+
+**1、场景一：在网络延迟的情况下让用户有时间点击多次submit按钮导致表单重复提交。**
+
+在网络比较慢的情况下，用户连续快速的点击多次提交按钮。
+
+**2、场景二：表单提交后用户点击【刷新】按钮导致表单重复提交。** 
+
+用户点击了提交按钮，然后点击浏览器上的【刷新】按钮对form表单又进行一次提交。
+
+**3、场景三：用户提交表单后，点击浏览器的【后退】按钮回退到表单页面后进行再次提交**
+
+
+
+**解决方案一：利用JavaScript防止表单重复提交。**
+在客户端的js代码中设置一个标识位，第一次提交后将标志位设置成true，或将提交按钮设置为不可用
+
+**解决方案二：利用Session防止表单重复提交**
+对于【场景二】和【场景三】导致表单重复提交的问题，既然客户端无法解决，那么就在服务器端解决，在服务器端解决就需要用到session了。
+
+**具体的做法：**
+
+在服务器端生成一个唯一的随机标识号，专业术语称为Token(令牌)，同时在当前用户的Session域中保存这个Token。然后将Token发送到客户端的Form表单中，在Form表单中使用隐藏域来存储这个Token，表单提交的时候连同这个Token一起提交到服务器端，然后在服务器端判断客户端提交上来的Token与服务器端生成的Token是否一致，如果不一致，那就是重复提交了，此时服务器端就可以不处理重复提交的表单。如果相同则处理表单提交，处理完后清除当前用户的Session域中存储的标识号。
+
+ 在下列情况下，服务器程序将拒绝处理用户提交的表单请求：
+
+1. 存储Session域中的Token(令牌)与表单提交的Token(令牌)不同。
+2. 当前用户的Session中不存在Token(令牌)。
+3. 用户提交的表单数据中没有Token(令牌)。
+
+[参考](http://www.cnblogs.com/xdp-gacl/p/3859416.html)
+
+
+
+## 22. BIO、NIO、AIO
+
+- BIO：同步阻塞
+- NIO：同步非阻塞
+- AIO：异步非阻塞
+
+ 
+
+ ## 23. 获取方法参数名
+
+在Java 8之前的版本，代码编译为class文件后，方法参数的类型是固定的，但参数名称却丢失了 ，为无意义的`arg0`、`arg1` 。
+
+为了获得参数名，可通过以下两种方法获得：
+
+1. **通过注解** 
+
+   ```java
+   public User getUser(@Param("groupid") String groupid, @Param("userid") String userid) {
+       ...
+   }
+   ```
+
+2. **从class文件中获取**
+
+   javac默认不会生成本地变量表信息，需指定```-g```或```-g:vars```，从class文件中获取参数名信息，可使用第三方类库 asm、javassist等操作。
+
+---
+
+**Java 8新特性，编译器保留方法参数名**，使用```-parameters```参数编译
+
+
+
+## 24. 线程池
+
+**概念**：一种多线程处理方式，线程池维护多个线程，等待被分配任务
+
+**作用**：限制系统中执行线程的数量
+
+**为什么使用线程池**：
+
+1. 减少创建和销毁线程的数量，工作线程可被重复利用
+2. 可根据系统的承受能力，调整线程池中工作线程的数量
+
+**四个基本组成**：
+
+1. 线程池管理器（ThreadPool）：用于创建并管理线程池
+2. 工作线程（PoolWorker）：线程池中线程可循环执行任务
+3. 任务接口（Task）：每个任务需实现的接口，以供工作线程调度任务的执行（任务入口，收尾工作，执行状态）
+4. 任务队列（TaskQueue）：存放未处理任务
+
+---
+
+**Java线程池的实现类：ThreadPoolExecutor**
+
+```java
+public ThreadPoolExecutor(int corePoolSize,
+                          int maximumPoolSize,
+                          long keepAliveTime,
+                          TimeUnit unit,
+                          BlockingQueue<Runnable> workQueue,
+                          ThreadFactory threadFactory,
+                          RejectedExecutionHandler handler) 
+```
+
+**线程池参数**
+
+1. **corePoolSize**：线程池的基本大小，当提交任务到线程池时，即使有其他空闲的基本线程也会创建线程。当基本线程数量达到corePoolSize则不再创建
+2. **maximumPoolSize**：线程池允许创建的最大线程数。如果阻塞队列满了，并且已经创建的线程数小于最大线程数，则线程池会再创建新的线程执行任务。 
+3. **keepAliveTime**：线程活动保持时间。指工作线程空闲后，继续保持存活的时间。默认情况下，这个参数只有在线程数大于corePoolSize时才起作用（也可设置对核心线程起作用）。所以，如果任务很多，且每个任务的执行时间比较短，可以调大keepAliveTime，提高线程的利用率。 
+4. **unit**：保持时间的单位
+5. **workQueue**：用来保存等待执行的任务的阻塞队列 
+   - ArrayBlockingQueue：基于数组结构的有界阻塞队列，按FIFO原则对元素进行排序。
+   - LinkedBlockingQuene：基于链表结构的阻塞队列，按FIFO排序元素，吞吐量通常要高于ArrayBlockingQuene。
+   - SynchronousQuene：一个不存储元素的阻塞队列，每个插入操作必须等到另一个线程调用移除操作，否则插入操作一直处于阻塞状态，吞吐量通常要高于LinkedBlockingQuene。
+   - priorityBlockingQuene：具有优先级的无界阻塞队列。
+6. **threadFactory**：创建线程的工厂。可以通过自定义线程工厂给每个线程设置有意义的名称 
+7. **rejectedExecutionHandler**：饱和策略。当阻塞队列满了且没有空闲的工作线程，说明线程池处于饱和状态，那么必须采取一种策略处理提交的新任务。这个策略在默认情况下是AbortPolicy，表示无法处理新任务时抛出异常。不过，线程池提供了4种策略：
+   - AbortPolicy：直接抛出异常。
+   - CallerRunsPolicy：只用调用者所在的线程来运行任务。
+   - DiscardOldestPolicy：丢弃阻塞队列中最近的一个任务，并执行当前任务。
+   - DiscardPolicy：直接丢弃。
+
+---
+
+**Executors**
+
+Exectors是java线程池的工厂类，通过它可以快速初始化一个符合业务需求的线程池，主要提供了以下几种便捷的方式：
+
+**1.newFixedThreadPool**：创建一个指定工作线程数的线程池，其中参数corePoolSize和maximumPoolSize相等，阻塞队列基于LinkedBlockingQuene。
+
+```java
+public static ExecutorService newFixedThreadPool(int nThreads) {
+return new ThreadPoolExecutor(nThreads, nThreads,
+                              0L, TimeUnit.MILLISECONDS,
+                              new LinkedBlockingQueue<Runnable>());
+}
+```
+
+优点：提高程序效率和节省创建线程时所耗的开销
+
+缺点：在线程池空闲时，即线程池中没有可运行任务时，它不会释放工作线程，还会占用一定的系统资源。 
+
+**2.newCachedThreadPool**：创建一个可缓存工作线程的线程池（工作线程默认存活时间1分钟）。
+
+```java
+public static ExecutorService newCachedThreadPool() {
+ return new ThreadPoolExecutor(0, Integer.MAX_VALUE,
+                               60L, TimeUnit.SECONDS,
+                               new SynchronousQueue<Runnable>());
+}
+```
+
+该线程池有以下特点：
+1、工作线程数量几乎没有上限，因为maximumPoolSize为Integer.MAX_VALUE（2147483647）。
+2、如果长时间没有提交任务，且工作线程空闲了指定的时间，则该工作线程将自动终止。如果重新提交了任务，则线程池重新创建一个工作线程。
+
+优点：在没有任务执行时，会释放工作线程，从而释放工作线程所占用的资源。
+
+缺点：当提交新任务时，没有空闲线程时，又要创建新的工作线程，有一定的系统开销。另外一定要注意控制任务的数量，否则由于大量线程同时运行，很有会造成系统瘫痪。
+
+**3.newSingleThreadExecutor**：创建一个只有单一工作线程的线程池。如果这个工作线程异常结束，会有另一个取代它。唯一的工作线程可以保证任务的顺序执行。
+
+```java
+new ThreadPoolExecutor(1, 1, 
+                       0L, TimeUnit.MILLISECONDS, 
+                       new LinkedBlockingQueue<Runnable>())
+```
+
+**4.newScheduledThreadPool**：创建一个可以在指定时间内周期性的执行任务的线程池。在实际业务中常用的场景是周期性的同步数据。
+
+---
+
+**任务提交**
+
+向线程池提交任务有两种：
+
+**1.execute()**：用于提交不需要返回值的任务，这个方式无法判断任务是否执行成功。
+
+```java
+executor.execute(runnableTask);
+```
+
+**2.submit()**：用于提交需要返回值的任务。线程池会返回一个Future对象，通过这个对象可以判断任务是否执行成功。
+
+```java
+Future future = executor.submit(callableTask);
+```
+
+---
+
+**实现原理**
+
+线程池的运行状态：
+
+1. RUNNING ： 接受新任务并且处理已经进入阻塞队列的任务。
+2. SHUTDOWN ： 不接受新任务，但是处理已经进入阻塞队列的任务。
+3. STOP : 不接受新任务，不处理已经进入阻塞队列的任务并且中断正在运行的任务。
+4. TIDYING : 所有的任务都已经终止，workerCount为0， 线程转化为TIDYING状态并且调用terminated钩子函数 。
+5. TERMINATED: terminated钩子函数已经运行完成。
+
+当向线程池提交一个任务时，如图所示：
+
+![线程池](images/线程池.png)
+
+
+
+1. 如果当前运行的线程数少于corePoolSize，则创建新的工作线程处理任务，否则进入步骤2。
+2. 如果线程池处于运行状态，则把任务放入BlockingQueue中，如果可用工作线程为0时，则创建新的工作线程，处理BlockingQueue的任务。
+3. 如果无法将任务加入到BlockingQueue，则创建新的线程处理任务，前提是目前运行的线程数小于maximumPoolSize，否则进入步骤4 任务被拒绝。
+
+
+
+## 15. 抽象类与接口
+
+相同点：
+
+- **不能实例化**
+- 抽象类中可以包含**非抽象的普通方法**，接口中可以有非抽象的非抽象方法，比如default方法
+- 都可以有**静态成员变量**
+
+不同点：
+
+- 抽象类可以有**构造方法**，接口中不能
+- 抽象类可以有**普通成员变量**，接口中不能
+- 抽象类的**抽象方法的访问类型**可以是public 、protected，但接口中的抽象方法只能是public
+- 抽象类中可以包含**静态方法**，接口中不能
+- 抽象类中**静态成员变量的访问类型**可以任意，接口中的变量只能是public static final类型
+- 一个类可以实现多个接口，但只能继承一个抽象类。
+
+---
+
+**抽象类里面的方法子类必须全部实现吗，可不可以有不实现的方法，接口呢？** 
+
+- 抽象类不一定，子类只会实现父类里的抽象方法，抽象类里可以有抽象方法也可以非抽象方法，子类不需要再去实现非抽象方法，如果子类一定要再次实现的话就叫做覆盖了 		
+- 接口里的方法必须全部实现，因为接口里的方法都是抽象的，默认都是public abstract
+
+**抽象类的作用是什么，什么时候用到抽象类**
+
+封装（隐藏对象的属性和实现细节，仅对外公开接口）

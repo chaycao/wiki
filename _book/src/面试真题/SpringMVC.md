@@ -23,3 +23,10 @@
 （10）DispatcherServlet使用Model对View进行视图渲染（模型数据填充到视图中）
 
 （11）DispatcherServlet响应用户 
+
+
+
+## 2. SpringMVC 缺点
+
+1. 重量级
+2. 配置繁琐

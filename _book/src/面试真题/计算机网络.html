@@ -918,24 +918,23 @@ response.addCookie(cookie);
 <p><strong>HTTP&#x77ED;&#x8FDE;&#x63A5;&#x7684;&#x7F3A;&#x70B9;&#xFF1A;</strong></p>
 <p>&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x9891;&#x7E41;&#xFF0C;&#x5C06;&#x5728;TCP&#x7684;&#x5EFA;&#x7ACB;&#x548C;&#x5173;&#x95ED;&#x64CD;&#x4F5C;&#x4E0A;&#x6D6A;&#x8D39;&#x65F6;&#x95F4;&#x548C;&#x5E26;&#x5BBD;&#x3002;</p>
 <h2 id="7http-10&#x3001;11&#x3001;20&#x533A;&#x522B;">7.HTTP 1.0&#x3001;1.1&#x3001;2.0&#x533A;&#x522B;</h2>
-<p>1.0 &#x4E0E; 1.1&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<p><strong>1.0 &#x4E0E; 1.1&#x7684;&#x533A;&#x522B;&#xFF1A;</strong></p>
 <ol>
 <li><p><strong>&#x957F;&#x8FDE;&#x63A5;</strong></p>
 <p>HTTP 1.0 &#x9700;&#x8981;&#x4F7F;&#x7528; keep-alive &#x53C2;&#x6570;&#x6765;&#x544A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5EFA;&#x7ACB;&#x957F;&#x8FDE;&#x63A5;&#x3002;HTTP 1.1 &#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x957F;&#x8FDE;&#x63A5;</p>
 </li>
-<li><p><strong>&#x8282;&#x7EA6;&#x5E26;&#x5BBD;</strong></p>
+<li><p><strong>&#x72B6;&#x6001;&#x7801; 100 Continue</strong></p>
 <p>HTTP 1.1 &#x652F;&#x6301;&#x53EA;&#x53D1;&#x9001; header &#x4FE1;&#x606F;&#xFF08;&#x65E0; body &#x4FE1;&#x606F;&#xFF09;&#xFF0C;&#x5F53;&#x63A5;&#x6536;&#x5230;100&#x65F6;&#xFF0C;&#x624D;&#x5F00;&#x59CB;&#x628A; body &#x53D1;&#x9001;&#xFF0C;&#x5F53;&#x6536;&#x5230; 401 &#x65F6;&#xFF0C;&#x5C31;&#x4E0D;&#x53D1;&#x9001; body</p>
 </li>
 <li><p><strong>HOST &#x57DF;</strong></p>
-<p>web server&#x4E0A;&#x7684;&#x591A;&#x4E2A;&#x865A;&#x62DF;&#x7AD9;&#x70B9;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A; ip &#x548C;&#x7AEF;&#x53E3;&#x3002;HTTP 1.0 &#x4E0D;&#x652F;&#x6301;&#xFF0C;HTTP 1.1 &#x652F;&#x6301;</p>
+<p>web server&#x4E0A;&#x7684;&#x591A;&#x4E2A;&#x865A;&#x62DF;&#x7AD9;&#x70B9;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A; ip &#x548C;&#x7AEF;&#x53E3;&#x3002;HTTP 1.0 &#x4E0D;&#x652F;&#x6301;&#xFF0C;HTTP 1.1 &#x652F;&#x6301;&#xFF0C;Request&#x6D88;&#x606F;&#x5934;&#x591A;&#x4E86;&#x4E00;&#x4E2A;Host&#x57DF;</p>
 </li>
-<li><p><strong>&#x65AD;&#x70B9;&#x7EED;&#x4F20;</strong></p>
-</li>
-<li><p><strong>&#x7BA1;&#x7EBF;&#x5316;</strong></p>
-<p>&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x53D1;&#x51FA;&#x591A;&#x4E2A; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x4E0D;&#x7528;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x7B49;&#x5F85;&#x54CD;&#x5E94; </p>
+<li><p><strong>&#x5206;&#x5757;&#x4F20;&#x8F93;&#x6570;&#x636E;</strong></p>
+<p>HTTP 1.0 &#x901A;&#x8FC7;Content-Length&#x5B57;&#x6BB5;&#x6307;&#x5B9A;&#x5B9E;&#x4F53;&#x957F;&#x5EA6;&#xFF0C;&#x5BF9;&#x4E8E;&#x52A8;&#x6001;&#x751F;&#x6210;&#x7684;&#x54CD;&#x5E94;&#xFF0C;&#x9700;&#x8981;&#x7F13;&#x5B58;&#x6574;&#x4E2A;&#x54CD;&#x5E94;</p>
+<p>HTTP 1.1 &#x5F15;&#x5165;&#x5206;&#x5757;&#x4F20;&#x8F93;&#xFF0C;&#x5C06;&#x6D88;&#x606F;&#x5B9E;&#x4F53;&#x5206;&#x5272;&#x4E3A;&#x4EFB;&#x610F;&#x5927;&#x5C0F;&#x7684;&#x7EC4;&#x5757;&#xFF0C;&#x5355;&#x72EC;&#x53D1;&#x9001;</p>
 </li>
 </ol>
-<p>1.1 &#x4E0E; 2.0&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<p><strong>1.1 &#x4E0E; 2.0&#x7684;&#x533A;&#x522B;&#xFF1A;</strong></p>
 <ol>
 <li><p><strong>&#x591A;&#x8DEF;&#x590D;&#x7528;</strong></p>
 <p>2.0 &#x540C;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x5E76;&#x53D1;&#x5904;&#x7406;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;</p>
@@ -949,7 +948,7 @@ response.addCookie(cookie);
 <p>&#x5BF9;&#x652F;&#x6301; HTTP 2.0 &#x7684; web server &#x8BF7;&#x6C42;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x987A;&#x4FBF;&#x628A;&#x4E00;&#x4E9B;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#x4E00;&#x8D77;&#x63A8;&#x9001;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x975E;&#x5E38;&#x9002;&#x5408;&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x8D44;&#x6E90;</p>
 </li>
 </ol>
-<h2 id="http-&#x4E0E;-https">HTTP &#x4E0E; HTTPS</h2>
+<h2 id="8-http-&#x4E0E;-https">8. HTTP &#x4E0E; HTTPS</h2>
 <p><strong>HTTP&#x5B58;&#x5728;&#x7684;&#x5B89;&#x5168;&#x95EE;&#x9898;&#xFF1A;</strong></p>
 <ul>
 <li>&#x901A;&#x4FE1;&#x4F7F;&#x7528;&#x660E;&#x6587;&#xFF0C;&#x4E0D;&#x52A0;&#x5BC6;&#xFF0C;&#x5185;&#x5BB9;&#x53EF;&#x80FD;&#x88AB;&#x7A83;&#x542C;</li>
@@ -971,7 +970,7 @@ response.addCookie(cookie);
 <li>&#x7AEF;&#x53E3;&#x4E0D;&#x540C;&#xFF1A;HTTP 80&#xFF0C;HTTPS 443</li>
 <li>&#x5C42;&#x6B21;&#x4E0D;&#x540C;&#xFF1A;HTTP&#x5728;TCP&#x4E4B;&#x4E0A;&#xFF0C;HTTPS&#x5728;SSL/TLS&#x4E4B;&#x4E0A;</li>
 </ul>
-<h2 id="8-http-&#x72B6;&#x6001;&#x7801;">8. HTTP &#x72B6;&#x6001;&#x7801;</h2>
+<h2 id="9-http-&#x72B6;&#x6001;&#x7801;">9. HTTP &#x72B6;&#x6001;&#x7801;</h2>
 <ul>
 <li><strong>1XX &#xFF1A;&#x6307;&#x793A;&#x4FE1;&#x606F;</strong>&#x2014;&#x2014;&#x8BF7;&#x6C42;&#x5DF2;&#x63A5;&#x6536;&#xFF0C;&#x9700;&#x8981;&#x8BF7;&#x6C42;&#x8005;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x64CD;&#x4F5C;</li>
 <li><strong>2XX&#xFF1A;&#x6210;&#x529F;</strong>&#x2014;&#x2014;&#x64CD;&#x4F5C;&#x88AB;&#x6210;&#x529F;&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;</li>
@@ -1004,7 +1003,7 @@ response.addCookie(cookie);
 <li><strong>500 Internal Server Error</strong>&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x5185;&#x90E8;&#x9519;&#x8BEF;</li>
 <li><strong>503 Service Unavailable</strong>&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x6B63;&#x5FD9;</li>
 </ul>
-<h2 id="9-http&#x7684;&#x7279;&#x70B9;">9. HTTP&#x7684;&#x7279;&#x70B9;</h2>
+<h2 id="10-http&#x7684;&#x7279;&#x70B9;">10. HTTP&#x7684;&#x7279;&#x70B9;</h2>
 <ol>
 <li>&#x652F;&#x6301;CS&#x901A;&#x4FE1;&#x6A21;&#x5F0F;</li>
 <li>&#x7B80;&#x5355;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#xFF1A;&#x534F;&#x8BAE;&#x7B80;&#x5355;&#xFF0C;&#x901A;&#x4FE1;&#x901F;&#x5EA6;&#x5FEB;</li>
@@ -1012,7 +1011,7 @@ response.addCookie(cookie);
 <li>&#x65E0;&#x8FDE;&#x63A5;</li>
 <li>&#x65E0;&#x72B6;&#x6001;</li>
 </ol>
-<h2 id="10-arp&#xFF08;&#x5730;&#x5740;&#x89E3;&#x6790;&#x534F;&#x8BAE;&#xFF09;">10. ARP&#xFF08;&#x5730;&#x5740;&#x89E3;&#x6790;&#x534F;&#x8BAE;&#xFF09;</h2>
+<h2 id="11-arp&#xFF08;&#x5730;&#x5740;&#x89E3;&#x6790;&#x534F;&#x8BAE;&#xFF09;">11. ARP&#xFF08;&#x5730;&#x5740;&#x89E3;&#x6790;&#x534F;&#x8BAE;&#xFF09;</h2>
 <p><strong>&#x89E3;&#x51B3;&#x540C;&#x4E00;&#x5C40;&#x57DF;&#x7F51;&#x5185;&#xFF0C;&#x4E3B;&#x673A;&#x6216;&#x8DEF;&#x7531;&#x5668;&#x7684; IP &#x5730;&#x5740;&#x548C; MAC &#x5730;&#x5740;&#x7684;&#x6620;&#x5C04;&#x95EE;&#x9898;&#x3002;</strong></p>
 <p>&#x5982;&#x679C;&#x6E90;&#x4E3B;&#x673A;&#x548C;&#x76EE;&#x7684;&#x4E3B;&#x673A;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5C40;&#x57DF;&#x7F51;&#x5185;&#xFF08;&#x76EE;&#x6807;IP&#x548C;&#x672C;&#x673A;IP&#x4E0E;&#x5B50;&#x7F51;&#x63A9;&#x7801;&#x76F8;&#x4E0E;&#x7ED3;&#x679C;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5B50;&#x7F51;&#xFF09;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;ARP&#x627E;&#x5230;&#x76EE;&#x7684;&#x4E3B;&#x673A;&#x7684;MAC&#x5730;&#x5740;&#xFF1B;&#x82E5;&#x4E0D;&#x5728;&#x540C;&#x4E00;&#x5C40;&#x57DF;&#x7F51;&#x5185;&#xFF0C;&#x7528;ARP&#x627E;&#x5230;&#x672C;&#x7F51;&#x7EDC;&#x7684;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x5668;&#x7684;MAC&#x5730;&#x5740;&#xFF0C;&#x5269;&#x4E0B;&#x5DE5;&#x4F5C;&#x7531;&#x8DEF;&#x7531;&#x5668;&#x5B8C;&#x6210;&#x3002;</p>
 <p><strong><em>ARP &#x534F;&#x8BAE;&#x7684;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#xFF1A;</em></strong></p>
@@ -1022,26 +1021,117 @@ response.addCookie(cookie);
 <li>&#x5F53;&#x672C;&#x7F51;&#x6BB5;&#x7684;&#x6240;&#x6709;&#x4E3B;&#x673A;&#x6536;&#x5230;ARP&#x8BF7;&#x6C42;&#x5206;&#x7EC4;&#x65F6;&#xFF0C;&#x68C0;&#x67E5;&#x76EE;&#x7684;&#x4E3B;&#x673A;IP&#x5730;&#x5740;&#x662F;&#x5426;&#x662F;&#x81EA;&#x5DF1;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x82E5;&#x4E0D;&#x662F;&#xFF0C;&#x5219;&#x5FFD;&#x7565;&#xFF1B;&#x82E5;&#x662F;&#xFF0C;&#x5219;&#x5C06;&#x6E90;&#x4E3B;&#x673A;IP&#x5730;&#x5740;&#x548C;MAC&#x5730;&#x5740;&#x5199;&#x5165;ARP&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x4E2D;&#xFF0C;&#x5C06;&#x81EA;&#x5DF1;&#x7684;MAC&#x5730;&#x5740;&#x5199;&#x5165;ARP&#x54CD;&#x5E94;&#x5305;&#x4E2D;&#x3002;</li>
 <li>&#x6E90;&#x4E3B;&#x673A;&#x6536;&#x5230;ARP&#x54CD;&#x5E94;&#x5206;&#x7EC4;&#x540E;&#xFF0C;&#x5C06;&#x76EE;&#x7684;&#x4E3B;&#x673A;IP&#x548C;MAC&#x5730;&#x5740;&#x5199;&#x5165;ARP&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x3002;&#x82E5;&#x4E00;&#x76F4;&#x6CA1;&#x6536;&#x5230;ARP&#x54CD;&#x5E94;&#x5206;&#x7EC4;&#xFF0C;&#x5219;ARP&#x67E5;&#x8BE2;&#x5931;&#x8D25;</li>
 </ol>
-<h2 id="11-&#x8DEF;&#x7531;&#x5668;&#x4E0E;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x533A;&#x522B;">11. &#x8DEF;&#x7531;&#x5668;&#x4E0E;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x533A;&#x522B;</h2>
+<h2 id="12-&#x8DEF;&#x7531;&#x5668;&#x4E0E;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x533A;&#x522B;">12. &#x8DEF;&#x7531;&#x5668;&#x4E0E;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x533A;&#x522B;</h2>
 <ol>
 <li>&#x4EA4;&#x6362;&#x673A;&#x5DE5;&#x4F5C;&#x5728;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#xFF1B;&#x8DEF;&#x7531;&#x5668;&#x5DE5;&#x4F5C;&#x5728;&#x7F51;&#x7EDC;&#x5C42;</li>
 <li>&#x4EA4;&#x6362;&#x673A;&#x8F6C;&#x53D1;&#x6570;&#x636E;&#x5E27;&#xFF1B;&#x8DEF;&#x7531;&#x5668;&#x8F6C;&#x53D1;IP&#x5206;&#x7EC4;</li>
 <li>&#x4EA4;&#x6362;&#x673A;&#x9694;&#x79BB;&#x51B2;&#x7A81;&#x57DF;&#xFF0C;&#x4E0D;&#x9694;&#x79BB;&#x5E7F;&#x64AD;&#x57DF;&#xFF1B;&#x8DEF;&#x7531;&#x5668;&#x9694;&#x79BB;&#x51B2;&#x7A81;&#x57DF;&#xFF0C;&#x9694;&#x79BB;&#x5E7F;&#x64AD;&#x57DF;</li>
 </ol>
-<h2 id="12-tcp&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x53EF;&#x9760;&#x4F20;&#x8F93;">12. TCP&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x53EF;&#x9760;&#x4F20;&#x8F93;</h2>
+<h2 id="13-tcp&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x53EF;&#x9760;&#x4F20;&#x8F93;">13. TCP&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x53EF;&#x9760;&#x4F20;&#x8F93;</h2>
 <ol>
 <li>&#x4F20;&#x9012;&#x6570;&#x636E;&#x524D;&#xFF0C;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;</li>
 <li>&#x5C06;&#x6570;&#x636E;&#x622A;&#x65AD;&#x4E3A;&#x5408;&#x7406;&#x7684;&#x957F;&#x5EA6;</li>
 <li>&#x8D85;&#x65F6;&#x91CD;&#x53D1;</li>
-<li>&#x5BF9;&#x4E8E;&#x53D7;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x7ED9;&#x51FA;&#x786E;&#x8BA4;&#x54CD;&#x5E94;</li>
+<li>&#x5BF9;&#x4E8E;&#x6536;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x7ED9;&#x51FA;&#x786E;&#x8BA4;&#x54CD;&#x5E94;</li>
 <li>&#x6548;&#x9A8C;&#x51FA;&#x5305;&#x6709;&#x9519;&#xFF0C;&#x4E22;&#x5F03;&#x62A5;&#x6587;&#x6BB5;&#xFF0C;&#x4E0D;&#x7ED9;&#x51FA;&#x54CD;&#x5E94;&#xFF0C;TCP&#x53D1;&#x9001;&#x6570;&#x636E;&#x6BB5;&#xFF0C;&#x8D85;&#x65F6;&#x65F6;&#x4F1A;&#x91CD;&#x53D1;&#x6570;&#x636E;</li>
 <li>&#x5BF9;&#x5931;&#x5E8F;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#xFF0C;&#x518D;&#x4EA4;&#x7ED9;&#x5E94;&#x7528;&#x5C42;</li>
 <li>&#x5BF9;&#x4E8E;&#x91CD;&#x590D;&#x6570;&#x636E;&#xFF0C;&#x80FD;&#x591F;&#x4E22;&#x5F03;&#x91CD;&#x590D;&#x6570;&#x636E;</li>
 <li>TCP&#x63D0;&#x4F9B;&#x6D41;&#x91CF;&#x63A7;&#x5236;&#xFF0C;&#x9632;&#x6B62;&#x8F83;&#x5FEB;&#x4E3B;&#x673A;&#x81F4;&#x4F7F;&#x8F83;&#x6162;&#x4E3B;&#x673A;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x6EA2;&#x51FA;</li>
 <li>TCP&#x63D0;&#x4F9B;&#x62E5;&#x585E;&#x63A7;&#x5236;&#xFF0C;&#x5F53;&#x7F51;&#x7EDC;&#x62E5;&#x585E;&#x65F6;&#xFF0C;&#x51CF;&#x5C11;&#x6570;&#x636E;&#x53D1;&#x9001;</li>
 </ol>
-<h2 id="13-tcp-&#x7684;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x548C;&#x56DB;&#x6B21;&#x6325;&#x624B;">13. TCP &#x7684;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x548C;&#x56DB;&#x6B21;&#x6325;&#x624B;</h2>
+<h2 id="14-tcp-&#x7684;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x548C;&#x56DB;&#x6B21;&#x6325;&#x624B;">14. TCP &#x7684;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x548C;&#x56DB;&#x6B21;&#x6325;&#x624B;</h2>
 <p><img src="images/TCP&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x4E0E;&#x56DB;&#x6B21;&#x6325;&#x624B;.jpg" alt="TCP&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x4E0E;&#x56DB;&#x6B21;&#x6325;&#x624B;"></p>
+<hr>
+<h2 id="15-tcp&#x7684;&#x6D41;&#x91CF;&#x63A7;&#x5236;">15. TCP&#x7684;&#x6D41;&#x91CF;&#x63A7;&#x5236;</h2>
+<p>&#x6D41;&#x91CF;&#x63A7;&#x5236;&#xFF1A;&#x8BA9;&#x53D1;&#x9001;&#x65B9;&#x7684;&#x53D1;&#x751F;&#x901F;&#x7387;&#x4E0D;&#x8981;&#x592A;&#x5FEB;&#xFF0C;&#x8BA9;&#x63A5;&#x6536;&#x65B9;&#x6765;&#x5F97;&#x53CA;&#x63A5;&#x6536;</p>
+<p><strong>&#x539F;&#x7406;</strong>&#xFF1A;<strong>&#x6ED1;&#x52A8;&#x7A97;&#x53E3;&#x673A;&#x5236;</strong>&#x3002;&#x8FD0;&#x7528;TCP&#x62A5;&#x6587;&#x6BB5;&#x4E2D;&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x5B57;&#x6BB5;&#x6765;&#x63A7;&#x5236;&#xFF0C;&#x53D1;&#x9001;&#x65B9;&#x7684;&#x53D1;&#x9001;&#x7A97;&#x53E3;&#x4E0D;&#x53EF;&#x4EE5;&#x5927;&#x4E8E;&#x63A5;&#x6536;&#x65B9;&#x53D1;&#x56DE;&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</p>
+<p><img src="images/TCP&#x6ED1;&#x52A8;&#x7A97;&#x53E3;.jpg" alt=""></p>
+<p>&#x7A97;&#x53E3;&#x662F;&#x7F13;&#x5B58;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x7528;&#x6765;&#x6682;&#x65F6;&#x5B58;&#x653E;&#x5B57;&#x8282;&#x6D41;&#x3002;&#x53D1;&#x9001;&#x65B9;&#x548C;&#x63A5;&#x6536;&#x65B9;&#x5404;&#x6709;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x63A5;&#x6536;&#x65B9;&#x901A;&#x8FC7; TCP &#x62A5;&#x6587;&#x6BB5;&#x4E2D;&#x7684;&#x7A97;&#x53E3;&#x5B57;&#x6BB5;&#x544A;&#x8BC9;&#x53D1;&#x9001;&#x65B9;&#x81EA;&#x5DF1;&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#xFF0C;&#x53D1;&#x9001;&#x65B9;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x503C;&#x548C;&#x5176;&#x5B83;&#x4FE1;&#x606F;&#x8BBE;&#x7F6E;&#x81EA;&#x5DF1;&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x3002;</p>
+<p>&#x53D1;&#x9001;&#x7A97;&#x53E3;&#x5185;&#x7684;&#x5B57;&#x8282;&#x90FD;&#x5141;&#x8BB8;&#x88AB;&#x53D1;&#x9001;&#xFF0C;&#x63A5;&#x6536;&#x7A97;&#x53E3;&#x5185;&#x7684;&#x5B57;&#x8282;&#x90FD;&#x5141;&#x8BB8;&#x88AB;&#x63A5;&#x6536;&#x3002;<strong>&#x5982;&#x679C;&#x53D1;&#x9001;&#x7A97;&#x53E3;&#x5DE6;&#x90E8;&#x7684;&#x5B57;&#x8282;&#x5DF2;&#x7ECF;&#x53D1;&#x9001;&#x5E76;&#x4E14;&#x6536;&#x5230;&#x4E86;&#x786E;&#x8BA4;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5C06;&#x53D1;&#x9001;&#x7A97;&#x53E3;&#x5411;&#x53F3;&#x6ED1;&#x52A8;&#x4E00;&#x5B9A;&#x8DDD;&#x79BB;&#xFF0C;&#x76F4;&#x5230;&#x5DE6;&#x90E8;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x4E0D;&#x662F;&#x5DF2;&#x53D1;&#x9001;&#x5E76;&#x4E14;&#x5DF2;&#x786E;&#x8BA4;&#x7684;&#x72B6;&#x6001;&#xFF1B;&#x63A5;&#x6536;&#x7A97;&#x53E3;&#x7684;&#x6ED1;&#x52A8;&#x7C7B;&#x4F3C;&#xFF0C;&#x63A5;&#x6536;&#x7A97;&#x53E3;&#x5DE6;&#x90E8;&#x5B57;&#x8282;&#x5DF2;&#x7ECF;&#x53D1;&#x9001;&#x786E;&#x8BA4;&#x5E76;&#x4EA4;&#x4ED8;&#x4E3B;&#x673A;&#xFF0C;&#x5C31;&#x5411;&#x53F3;&#x6ED1;&#x52A8;&#x63A5;&#x6536;&#x7A97;&#x53E3;</strong>&#x3002;</p>
+<p><strong>&#x63A5;&#x6536;&#x7A97;&#x53E3;&#x53EA;&#x4F1A;&#x5BF9;&#x7A97;&#x53E3;&#x5185;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6309;&#x5E8F;&#x5230;&#x8FBE;&#x7684;&#x5B57;&#x8282;&#x8FDB;&#x884C;&#x786E;&#x8BA4;</strong>&#xFF0C;&#x4F8B;&#x5982;&#x63A5;&#x6536;&#x7A97;&#x53E3;&#x5DF2;&#x7ECF;&#x6536;&#x5230;&#x7684;&#x5B57;&#x8282;&#x4E3A; {31, 34, 35}&#xFF0C;&#x5176;&#x4E2D; {31} &#x6309;&#x5E8F;&#x5230;&#x8FBE;&#xFF0C;&#x800C; {32, 33} &#x5C31;&#x4E0D;&#x662F;&#xFF0C;&#x56E0;&#x6B64;&#x53EA;&#x5BF9;&#x5B57;&#x8282; 31 &#x8FDB;&#x884C;&#x786E;&#x8BA4;&#x3002;&#x53D1;&#x9001;&#x65B9;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x786E;&#x8BA4;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x5B57;&#x8282;&#x4E4B;&#x524D;&#x7684;&#x6240;&#x6709;&#x5B57;&#x8282;&#x90FD;&#x5DF2;&#x7ECF;&#x88AB;&#x63A5;&#x6536;&#x3002;</p>
+<h2 id="16-tcp&#x7684;&#x62E5;&#x585E;&#x63A7;&#x5236;">16. TCP&#x7684;&#x62E5;&#x585E;&#x63A7;&#x5236;</h2>
+<p>&#x62E5;&#x585E;&#x63A7;&#x5236;&#x662F;&#x4E3A;&#x4E86;&#x964D;&#x4F4E;&#x7F51;&#x7EDC;&#x7684;&#x62E5;&#x585E;&#x7A0B;&#x5EA6;</p>
+<p><img src="images/&#x62E5;&#x585E;&#x63A7;&#x5236;&#x7684;&#x4F5C;&#x7528;.jpg" alt=""></p>
+<p>4&#x79CD;&#x7B97;&#x6CD5;&#xFF1A;&#x6162;&#x5F00;&#x59CB;&#x3001;&#x62E5;&#x585E;&#x907F;&#x514D;&#x3001;&#x5FEB;&#x91CD;&#x4F20;&#x3001;&#x5FEB;&#x6062;&#x590D;</p>
+<p>&#x53D1;&#x9001;&#x65B9;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<strong>&#x62E5;&#x585E;&#x7A97;&#x53E3;&#xFF08;cwnd&#xFF09;</strong>&#x7684;&#x72B6;&#x6001;&#x53D8;&#x91CF;&#xFF08;&#x62E5;&#x585E;&#x7A97;&#x53E3;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x53D8;&#x91CF;&#xFF0C;&#x5B9E;&#x9645;&#x51B3;&#x5B9A;&#x53D1;&#x9001;&#x65B9;&#x80FD;&#x53D1;&#x9001;&#x591A;&#x5C11;&#x6570;&#x636E;&#x7684;&#x662F;&#x53D1;&#x9001;&#x65B9;&#x7A97;&#x53E3;&#xFF09;</p>
+<p><img src="images/TCP&#x62E5;&#x585E;&#x63A7;&#x5236;.png" alt=""></p>
+<ol>
+<li><p>&#x6162;&#x5F00;&#x59CB;&#x4E0E;&#x62E5;&#x585E;&#x907F;&#x514D;</p>
+<p><strong>&#x53D1;&#x9001;&#x7684;&#x6700;&#x521D;&#x6267;&#x884C;&#x6162;&#x5F00;&#x59CB;&#xFF0C;&#x4EE4; cwnd=1&#xFF0C;&#x53D1;&#x9001;&#x65B9;&#x53EA;&#x80FD;&#x53D1;&#x9001; 1 &#x4E2A;&#x62A5;&#x6587;&#x6BB5;&#xFF1B;&#x5F53;&#x6536;&#x5230;&#x786E;&#x8BA4;&#x540E;&#xFF0C;&#x5C06; cwnd &#x52A0;&#x500D;</strong>&#xFF0C;&#x56E0;&#x6B64;&#x4E4B;&#x540E;&#x53D1;&#x9001;&#x65B9;&#x80FD;&#x591F;&#x53D1;&#x9001;&#x7684;&#x62A5;&#x6587;&#x6BB5;&#x6570;&#x91CF;&#x4E3A;&#xFF1A;2&#x3001;4&#x3001;8 ...</p>
+<p>&#x6CE8;&#x610F;&#x5230;&#x6162;&#x5F00;&#x59CB;&#x6BCF;&#x4E2A;&#x8F6E;&#x6B21;&#x90FD;&#x5C06; cwnd &#x52A0;&#x500D;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x8BA9; cwnd &#x589E;&#x957F;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x5FEB;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F97;&#x53D1;&#x9001;&#x65B9;&#x53D1;&#x9001;&#x7684;&#x901F;&#x5EA6;&#x589E;&#x957F;&#x901F;&#x5EA6;&#x8FC7;&#x5FEB;&#xFF0C;&#x7F51;&#x7EDC;&#x62E5;&#x585E;&#x7684;&#x53EF;&#x80FD;&#x4E5F;&#x5C31;&#x66F4;&#x9AD8;&#x3002;<strong>&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6162;&#x5F00;&#x59CB;&#x95E8;&#x9650; ssthresh&#xFF0C;&#x5F53; cwnd &gt;= ssthresh &#x65F6;&#xFF0C;&#x8FDB;&#x5165;&#x62E5;&#x585E;&#x907F;&#x514D;&#xFF0C;&#x6BCF;&#x4E2A;&#x8F6E;&#x6B21;&#x53EA;&#x5C06; cwnd &#x52A0; 1</strong>&#x3002;</p>
+<p><strong>&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E86;&#x8D85;&#x65F6;&#xFF0C;&#x5219;&#x4EE4; ssthresh = cwnd/2&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x6162;&#x5F00;&#x59CB;</strong>&#x3002;</p>
+</li>
+<li><p>&#x5FEB;&#x91CD;&#x4F20;&#x4E0E;&#x5FEB;&#x6062;&#x590D;</p>
+<p><strong>&#x5728;&#x63A5;&#x6536;&#x65B9;&#xFF0C;&#x8981;&#x6C42;&#x6BCF;&#x6B21;&#x63A5;&#x6536;&#x5230;&#x62A5;&#x6587;&#x6BB5;&#x90FD;&#x5E94;&#x8BE5;&#x5BF9;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5DF2;&#x6536;&#x5230;&#x7684;&#x6709;&#x5E8F;&#x62A5;&#x6587;&#x6BB5;&#x8FDB;&#x884C;&#x786E;&#x8BA4;</strong>&#x3002;&#x4F8B;&#x5982;&#x5DF2;&#x7ECF;&#x63A5;&#x6536;&#x5230; M1 &#x548C; M2&#xFF0C;&#x6B64;&#x65F6;&#x6536;&#x5230; M4&#xFF0C;&#x5E94;&#x5F53;&#x53D1;&#x9001;&#x5BF9; M2 &#x7684;&#x786E;&#x8BA4;&#x3002;</p>
+<p><strong>&#x5728;&#x53D1;&#x9001;&#x65B9;&#xFF0C;&#x5982;&#x679C;&#x6536;&#x5230;&#x4E09;&#x4E2A;&#x91CD;&#x590D;&#x786E;&#x8BA4;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x4E0B;&#x4E00;&#x4E2A;&#x62A5;&#x6587;&#x6BB5;&#x4E22;&#x5931;&#xFF0C;&#x6B64;&#x65F6;&#x6267;&#x884C;&#x5FEB;&#x91CD;&#x4F20;&#xFF0C;&#x7ACB;&#x5373;&#x91CD;&#x4F20;&#x4E0B;&#x4E00;&#x4E2A;&#x62A5;&#x6587;&#x6BB5;</strong>&#x3002;&#x4F8B;&#x5982;&#x6536;&#x5230;&#x4E09;&#x4E2A; M2&#xFF0C;&#x5219; M3 &#x4E22;&#x5931;&#xFF0C;&#x7ACB;&#x5373;&#x91CD;&#x4F20; M3&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<strong>&#x53EA;&#x662F;&#x4E22;&#x5931;&#x4E2A;&#x522B;&#x62A5;&#x6587;&#x6BB5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7F51;&#x7EDC;&#x62E5;&#x585E;&#x3002;&#x56E0;&#x6B64;&#x6267;&#x884C;&#x5FEB;&#x6062;&#x590D;&#xFF0C;&#x4EE4; ssthresh = cwnd/2 &#xFF0C;cwnd = ssthresh</strong>&#xFF0C;&#x6CE8;&#x610F;&#x5230;&#x6B64;&#x65F6;<strong>&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x62E5;&#x585E;&#x907F;&#x514D;</strong>&#x3002;&#x6162;&#x5F00;&#x59CB;&#x548C;&#x5FEB;&#x6062;&#x590D;&#x7684;&#x5FEB;&#x6162;&#x6307;&#x7684;&#x662F; cwnd &#x7684;&#x8BBE;&#x5B9A;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x662F; cwnd &#x7684;&#x589E;&#x957F;&#x901F;&#x7387;&#x3002;&#x6162;&#x5F00;&#x59CB; cwnd &#x8BBE;&#x5B9A;&#x4E3A; 1&#xFF0C;&#x800C;&#x5FEB;&#x6062;&#x590D; cwnd &#x8BBE;&#x5B9A;&#x4E3A; ssthresh&#x3002;</p>
+<p><img src="images/&#x5FEB;&#x91CD;&#x4F20;.png" alt=""></p>
+</li>
+</ol>
+<hr>
+<h2 id="17-tcp&#x4E0E;udp">17. TCP&#x4E0E;UDP</h2>
+<p>   &#x7528;&#x6237;&#x6570;&#x636E;&#x62A5;&#x534F;&#x8BAE; UDP&#xFF08;User Datagram Protocol&#xFF09;&#x662F;&#x65E0;&#x8FDE;&#x63A5;&#x7684;&#xFF0C;&#x5C3D;&#x6700;&#x5927;&#x53EF;&#x80FD;&#x4EA4;&#x4ED8;&#xFF0C;&#x6CA1;&#x6709;&#x62E5;&#x585E;&#x63A7;&#x5236;&#xFF0C;&#x9762;&#x5411;&#x62A5;&#x6587;&#xFF08;&#x5BF9;&#x4E8E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F20;&#x4E0B;&#x6765;&#x7684;&#x62A5;&#x6587;&#x4E0D;&#x5408;&#x5E76;&#x4E5F;&#x4E0D;&#x62C6;&#x5206;&#xFF0C;&#x53EA;&#x662F;&#x6DFB;&#x52A0; UDP &#x9996;&#x90E8;&#xFF09;&#xFF0C;&#x652F;&#x6301;&#x4E00;&#x5BF9;&#x4E00;&#x3001;&#x4E00;&#x5BF9;&#x591A;&#x3001;&#x591A;&#x5BF9;&#x4E00;&#x548C;&#x591A;&#x5BF9;&#x591A;&#x7684;&#x4EA4;&#x4E92;&#x901A;&#x4FE1;&#x3002;</p>
+<p>   &#x4F20;&#x8F93;&#x63A7;&#x5236;&#x534F;&#x8BAE; TCP&#xFF08;Transmission Control Protocol&#xFF09;&#x662F;&#x9762;&#x5411;&#x8FDE;&#x63A5;&#x7684;&#xFF0C;&#x63D0;&#x4F9B;&#x53EF;&#x9760;&#x4EA4;&#x4ED8;&#xFF0C;&#x6709;&#x6D41;&#x91CF;&#x63A7;&#x5236;&#xFF0C;&#x62E5;&#x585E;&#x63A7;&#x5236;&#xFF0C;&#x63D0;&#x4F9B;&#x5168;&#x53CC;&#x5DE5;&#x901A;&#x4FE1;&#xFF0C;&#x9762;&#x5411;&#x5B57;&#x8282;&#x6D41;&#xFF08;&#x628A;&#x5E94;&#x7528;&#x5C42;&#x4F20;&#x4E0B;&#x6765;&#x7684;&#x62A5;&#x6587;&#x770B;&#x6210;&#x5B57;&#x8282;&#x6D41;&#xFF0C;&#x628A;&#x5B57;&#x8282;&#x6D41;&#x7EC4;&#x7EC7;&#x6210;&#x5927;&#x5C0F;&#x4E0D;&#x7B49;&#x7684;&#x6570;&#x636E;&#x5757;&#xFF09;&#xFF0C;&#x6BCF;&#x4E00;&#x6761; TCP &#x8FDE;&#x63A5;&#x53EA;&#x80FD;&#x662F;&#x70B9;&#x5BF9;&#x70B9;&#x7684;&#xFF08;&#x4E00;&#x5BF9;&#x4E00;&#xFF09;&#x3002;</p>
+<p>   <strong>&#x533A;&#x522B;&#xFF1A;</strong></p>
+<ol>
+<li><p>&#x57FA;&#x4E8E;&#x8FDE;&#x63A5; vs &#x65E0;&#x8FDE;&#x63A5;</p>
+<p>TCP &#x9762;&#x5411;&#x8FDE;&#x63A5;&#xFF1B;UDP &#x65E0;&#x8FDE;&#x63A5;</p>
+</li>
+<li><p>&#x53EF;&#x9760;&#x6027;</p>
+<p>TCP &#x63D0;&#x4F9B;&#x53EF;&#x9760;&#x4EA4;&#x4ED8;&#xFF0C;&#x82E5;&#x6709;&#x6D88;&#x606F;&#x4E22;&#x5931;&#xFF0C;&#x5219;&#x91CD;&#x53D1;&#xFF1B;UDP &#x4E0D;&#x53EF;&#x9760;</p>
+</li>
+<li><p>&#x6709;&#x5E8F;&#x6027;</p>
+<p>TCP &#x4F1A;&#x5C06;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF1B;UDP &#x4E0D;&#x63D0;&#x4F9B;&#x6709;&#x5E8F;&#x6027;&#x7684;&#x4FDD;&#x8BC1;</p>
+</li>
+<li><p>&#x901F;&#x5EA6;</p>
+<p>TCP &#x901F;&#x5EA6;&#x6162;&#xFF1B;UDP &#x901F;&#x5EA6;&#x5FEB;</p>
+</li>
+<li><p>&#x91CD;&#x91CF;&#x7EA7; vs &#x8F7B;&#x91CF;&#x7EA7;</p>
+<p>TCP &#x91CD;&#x91CF;&#x7EA7;&#xFF0C;&#x62A5;&#x5934;&#x6700;&#x5C11;20&#x5B57;&#x8282;&#xFF08;&#x5E8F;&#x5217;&#x53F7;&#x3001;ACK&#x53F7;&#x3001;&#x6570;&#x636E;&#x504F;&#x79FB;&#x91CF;&#x3001;&#x4FDD;&#x7559;&#x3001;&#x63A7;&#x5236;&#x4F4D;&#x3001;&#x7A97;&#x53E3;&#x3001;&#x7D27;&#x6025;&#x6307;&#x9488;&#x3001;&#x53EF;&#x9009;&#x9879;&#x3001;&#x586B;&#x5145;&#x9879;&#x3001;&#x6821;&#x9A8C;&#x4F4D;&#x3001;&#x6E90;&#x7AEF;&#x53E3;&#x3001;&#x76EE;&#x7684;&#x7AEF;&#x53E3;&#xFF09;</p>
+<p>UDP &#x8F7B;&#x91CF;&#x7EA7;&#xFF0C;&#x62A5;&#x5934;&#x56FA;&#x5B9A;8&#x5B57;&#x8282;&#xFF08;&#x957F;&#x5EA6;&#x3001;&#x6E90;&#x7AEF;&#x53E3;&#x53F7;&#x3001;&#x76EE;&#x7684;&#x7AEF;&#x53E3;&#x3001;&#x6821;&#x9A8C;&#x548C;&#xFF09;</p>
+</li>
+<li><p>&#x6D41;&#x91CF;&#x63A7;&#x5236;&#x6216;&#x62E5;&#x585E;&#x63A7;&#x5236;</p>
+<p>TCP &#x6709;&#x6D41;&#x91CF;&#x63A7;&#x5236;&#x548C;&#x62E5;&#x585E;&#x63A7;&#x5236;&#xFF1B;UDP&#x6CA1;&#x6709;</p>
+</li>
+<li><p>TCP &#x9762;&#x5411;&#x5B57;&#x8282;&#x6D41;&#xFF0C;UCP &#x9762;&#x5411;&#x62A5;&#x6587;</p>
+</li>
+<li><p>TCP &#x53EA;&#x80FD;&#x5355;&#x64AD;&#xFF0C;UDP &#x53EF;&#x4EE5;&#x5E7F;&#x64AD;&#x548C;&#x7EC4;&#x64AD;</p>
+</li>
+</ol>
+<p><strong>&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;</strong></p>
+<ul>
+<li>TCP&#xFF1A;&#x6548;&#x7387;&#x8981;&#x6C42;&#x76F8;&#x5BF9;&#x4F4E;&#xFF0C;&#x51C6;&#x786E;&#x6027;&#x8981;&#x6C42;&#x76F8;&#x5BF9;&#x9AD8;&#x7684;&#x573A;&#x666F;&#x3002;&#x5982;&#x6587;&#x4EF6;&#x4F20;&#x8F93;&#x3001;&#x90AE;&#x4EF6;&#x4F20;&#x8F93;&#x3001;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;</li>
+<li>UDP&#xFF1A;&#x6548;&#x7387;&#x8981;&#x6C42;&#x76F8;&#x5BF9;&#x9AD8;&#xFF0C;&#x51C6;&#x786E;&#x6027;&#x8981;&#x6C42;&#x76F8;&#x5BF9;&#x4F4E;&#x7684;&#x573A;&#x666F;&#x3002;&#x5982;&#x89C6;&#x9891;&#x804A;&#x5929;&#x3001;&#x7F51;&#x7EDC;&#x7535;&#x8BDD;&#x3001;&#x5E7F;&#x64AD;&#x901A;&#x4FE1;</li>
+</ul>
+<p><strong>TCP&#x5B89;&#x5168;&#xFF0C;&#x4F46;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x7528;UDP&#xFF1F;</strong></p>
+<ul>
+<li>&#x65E0;&#x9700;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x51CF;&#x5C11;&#x5EF6;&#x8FDF;</li>
+<li>&#x65E0;&#x9700;&#x7EF4;&#x62A4;&#x8FDE;&#x63A5;&#x72B6;&#x6001;</li>
+<li>&#x5934;&#x90E8;&#x5F00;&#x9500;&#x5C0F;</li>
+<li>&#x5E94;&#x7528;&#x5C42;&#x80FD;&#x66F4;&#x597D;&#x63A7;&#x5236;&#x53D1;&#x9001;&#x6570;&#x636E;&#x548C;&#x53D1;&#x9001;&#x65F6;&#x95F4;&#xFF0C;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x62E5;&#x585E;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x4E3B;&#x673A;&#x7684;&#x53D1;&#x9001;&#x9891;&#x7387;</li>
+</ul>
+<p><strong>UDP&#x4E3A;&#x4F55;&#x5FEB;&#xFF1F;</strong></p>
+<ul>
+<li>&#x65E0;&#x9700;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;</li>
+<li>&#x5BF9;&#x4E8E;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x7528;&#x7ED9;&#x51FA;&#x786E;&#x8BA4;</li>
+<li>&#x6CA1;&#x6709;&#x8D85;&#x65F6;&#x91CD;&#x4F20;</li>
+<li>&#x6CA1;&#x6709;&#x6D41;&#x91CF;&#x63A7;&#x5236;&#x548C;&#x62E5;&#x585E;&#x63A7;&#x5236;</li>
+</ul>
+<h2 id="18-restful">18. RESTFul</h2>
+<p>REST - representational state transfer&#xFF0C;&#x8868;&#x73B0;&#x5C42;&#x72B6;&#x6001;&#x8F6C;&#x79FB;</p>
+<p>&#x7528;URL&#x5B9A;&#x4F4D;&#x8D44;&#x6E90;&#xFF0C;&#x7528;HTTP&#x52A8;&#x8BCD;&#xFF08;GET&#x3001;POST&#x3001;DELETE&#x3001;DELETE&#xFF09;&#x63CF;&#x8FF0;&#x64CD;&#x4F5C;</p>
+<p><strong>&#x4F18;&#x70B9;</strong></p>
+<ol>
+<li>&#x8F7B;&#x91CF;&#xFF0C;&#x76F4;&#x63A5;&#x57FA;&#x4E8E;http&#xFF0C;&#x4E0D;&#x5728;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x522B;&#x7684;&#x8BF8;&#x5982;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x3002;get/post/put/delete&#x4E3A;CRUD&#x64CD;&#x4F5C;</li>
+<li>&#x9762;&#x5411;&#x8D44;&#x6E90;&#xFF0C;&#x4E00;&#x76EE;&#x4E86;&#x7136;&#xFF0C;&#x5177;&#x6709;&#x81EA;&#x89E3;&#x91CA;&#x6027;&#x3002;</li>
+<li>&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B80;&#x5355;&#xFF0C;&#x4E00;&#x822C;&#x4EE5;xml&#xFF0C;json&#x505A;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x3002;</li>
+</ol>
+<p><strong>&#x7F3A;&#x70B9;</strong></p>
+<p>&#x5BFC;&#x81F4;&#x8BBE;&#x8BA1;uri&#x53D8;&#x5F97;&#x590D;&#x6742;&#x4E86;&#x3002;&#x5C24;&#x5176;&#x662F;&#x590D;&#x6742;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x64CD;&#x4F5C;&#xFF0C;&#x8D44;&#x6E90;&#x96C6;&#x5408; &#x3002;</p>
+<ol>
+<li>HTTP&#x52A8;&#x8BCD;&#x592A;&#x5C11;&#xFF0C;&#x53EA;&#x6709;CRUD&#xFF0C;&#x590D;&#x6742;&#x64CD;&#x4F5C;&#x4E0D;&#x9002;&#x7528;&#xFF0C;&#x5982;&#x90E8;&#x5206;&#x66F4;&#x65B0;</li>
+<li>&#x6279;&#x91CF;&#x7684;&#x5220;&#x9664;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x65B0;&#x589E;&#xFF08;&#x5C06;&#x591A;&#x4E2A;&#x8D44;&#x6E90;&#x770B;&#x505A;&#x5355;&#x4E2A;&#x8D44;&#x6E90;&#xFF09;</li>
+</ol>
 
                                 
                                 </section>
@@ -1085,7 +1175,7 @@ response.addCookie(cookie);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"计算机网络","level":"4.5","depth":1,"next":{"title":"算法","level":"4.6","depth":1,"path":"src/面试真题/算法.md","ref":"src/面试真题/算法.md","articles":[]},"previous":{"title":"数据库","level":"4.4","depth":1,"path":"src/面试真题/数据库.md","ref":"src/面试真题/数据库.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"src/面试真题/计算机网络.md","mtime":"2018-07-12T11:55:58.782Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-16T12:28:34.988Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"计算机网络","level":"4.5","depth":1,"next":{"title":"算法","level":"4.6","depth":1,"path":"src/面试真题/算法.md","ref":"src/面试真题/算法.md","articles":[]},"previous":{"title":"数据库","level":"4.4","depth":1,"path":"src/面试真题/数据库.md","ref":"src/面试真题/数据库.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"chaycao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","links":{"sidebar":{"GitHub":"https://github.com/chaycao"}},"gitbook":"*"},"file":{"path":"src/面试真题/计算机网络.md","mtime":"2018-07-26T08:10:45.422Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-26T15:35:12.640Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
