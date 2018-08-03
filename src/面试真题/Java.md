@@ -386,7 +386,27 @@ JVM 基于进入和退出 Monitor 对象来实现方法同步、代码块同步
 
 方法同步：方法调用指令读取运行时常量池中方法的 ACC_SYNCHRONIZED 标志辨别是否为同步方法
 
+**synchronized和lock的区别**
 
+- 用法
+
+  - synchronized加在方法、特定代码块上，括号中表示需要锁的对象
+  - lock需要通过lock()和unlock()显示指定起始位置和终止位置
+
+- 性能
+
+  - synchronized由JVM实现，lock是由Java代码实现
+  - 在1.6之前，lock性能更高
+  - 1.6之后，synchronized加了锁优化，（适应自旋，锁消除，锁粗化，轻量级锁，偏向锁），性能不比lock差
+
+- 用途
+
+  - lock更加灵活
+    - 某个线程在等待一个锁的控制权的这段时间需要中断 
+    - 需要分开处理一些wait-notify，ReentrantLock里面的Condition应用，能够控制notify哪个线程 
+    - 具有公平锁功能，每个到来的线程都将排队等候 
+
+  
 
 ## 19. Socket 编程
 
@@ -623,7 +643,16 @@ Future future = executor.submit(callableTask);
 
 
 
-## 15. 抽象类与接口
+**线程池的数量设置**：
+
+最佳线程数数目 = (线程等待时间与线程CPU时间之比 + 1 ) * CPU数目
+
+- 如果是CPU密集型应用，则线程池大小设置为N+1（当计算密集型的线程偶尔由于缺失故障或者其他原因而暂停时，这个额外的线程也能确保CPU的时钟周期不会被浪费）
+- 如果是IO密集型应用，则线程池大小设置为2N+1
+
+
+
+## 25. 抽象类与接口
 
 相同点：
 
@@ -650,3 +679,25 @@ Future future = executor.submit(callableTask);
 **抽象类的作用是什么，什么时候用到抽象类**
 
 封装（隐藏对象的属性和实现细节，仅对外公开接口）
+
+
+
+
+
+## 26. Arrays.sort()和Collections.sort()
+
+Java8中Arrays的排序方法只提供了两种算法的实现： 
+
+- sort方法：双轴快速排序算法实现。
+
+- parallelSort方法：并行归并排序算法实现。 
+
+  
+
+1. 在双轴快速排序算法中，如果数组的长度小于47，采用插入排序或成对插入排序算法实现。 
+2. 数组长度小于286，会直接使用双轴快排。 
+3. 如果数组中局部有序的片段比较多，则采用TimSort排序算法（一种改进的归并排序算法）。 
+
+
+
+Collections.sort的方法也最终调用的是Arrays.sort方法的 

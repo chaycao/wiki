@@ -330,3 +330,58 @@ Spring是一个DI和AOP容器框架。
 2. 引用Bean：<ref bean="A"/>，容器中的另一个Bean实例
 3. 嵌套Bean：<bean class="com.chaycao.B"/>，容器不能获得嵌套Bean
 4. 集合值：<list/>、<set/>、<map/>、<props/>分别设置List、Set、Map、Properties的集合参数值
+
+
+
+## 14. 使用了哪些设计模式
+
+1. **工厂方法**
+
+   FactoryBean。定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method使一个类的实例化延迟到其子类。 
+
+2. **单例**
+
+   保证一个类仅有一个实例，并提供一个访问它的全局访问点。
+
+   Spring中的单例模式完成了后半句话，即提供了全局的访问点BeanFactory。但没有从构造器级别去控制单例，这是因为Spring管理的是是任意的Java对象。
+
+3. **适配器**
+
+   将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。
+
+   Spring中在对于AOP的处理中有Adapter模式的例子 。由于Advisor链需要的是MethodInterceptor对象，所以每一个Advisor中的Advice都要适配成对应的MethodInterceptor对象。 
+
+4. **包装器**
+
+   动态地给一个对象添加一些额外的职责。
+
+   Spring中用到的包装器模式在类名上有两种表现：一种是类名中含有Wrapper，另一种是类名中含有Decorator。基本上都是动态地给一个对象添加一些额外的职责。  
+
+5. **代理**
+
+   为其他对象提供一种代理以控制对这个对象的访问。
+
+    从结构上来看和Decorator模式类似，但Proxy是控制，更像是一种对功能的限制，而Decorator是增加职责。
+
+    Spring的Proxy模式在aop中有体现，比如JdkDynamicAopProxy和Cglib2AopProxy。
+
+6. **观察者**
+
+   定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。 
+
+   Spring中Observer模式常用的地方是listener的实现。如ApplicationListener。 
+
+7. **策略**
+
+   定义一系列的算法，把它们一个个封装起来，并且使它们可相互替换。本模式使得算法可独立于使用它的客户而变化。 
+
+   Spring中在实例化对象的时候用到Strategy模式 
+
+   - 加载资源文件的方式，使用了不同的方法，比如：ClassPathResourece，FileSystemResource，ServletContextResource，UrlResource但他们都有共同的借口Resource 
+   - Aop的实现中，采用了两种不同的方式，JDK动态代理和CGLIB代理 
+   - Spring的事务管理，PlatformTransactionManager代表事务管理接口，但是它不知道底层如何管理事务，它只要求事务管理
+   - 提供开始事务(getTransaction(),commit(),rollback()三个方法，但是如何实现则交给具体实现类来完成--不同的实现类代表不同的事务管理策略。
+
+8. **模板方法**
+
+   定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。 
